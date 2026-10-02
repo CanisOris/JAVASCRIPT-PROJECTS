@@ -34,7 +34,7 @@ function doModulus(a, b) {
 
 function doUnaryMath(str, b, msgId) {
     var msgdiv = document.getElementById(msgId);
-    msgdiv.innerHTML = "Unary Operator of" + str + " and number " + b + " results in " + executeUnaryMath(str, b);
+    msgdiv.innerHTML = "Unary Operator of " + str + " and number " + b + " results in " + executeUnaryMath(str, b);
 }
 
 function doRandom(a, b) {
@@ -44,7 +44,7 @@ function doRandom(a, b) {
 
 
 // MATH FUNCS
-
+// using Math.floor(math object)
 function calcRandom(a,b) {
     return Math.floor(Math.random() * a) + b;
 }
