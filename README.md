@@ -8,8 +8,22 @@ Javascript Assignments
 | :--  | :-- |
 | [1st Assi](#) | unknown |
 | [blank](#blank) | blank |
+| [blank](#blank) | blank |
+| [blank](#blank) | blank |
+| [Toolbox](#Toolbox) | Toolbox |
 | [Portfolio](#portfolio) | Portfolio Project |
 | [Connect](#connect) | Connect with me |
+
+
+---
+## Assignments
+
+**My JS Assignments**
+
+| Platform | Profile |
+| :-- | :-- |
+| Assignment 1 | https://github.com/CanisOris/JAVASCRIPT-PROJECTS/tree/main/Basic%20JavaScript%20Projects/Project1_expressions_alert (Basic JavaScript Projects Submission Assignment)|
+
 
 ---
 ## Toolbox
@@ -18,8 +32,7 @@ Javascript Assignments
 
 | Platform | Profile |
 | :-- | :-- |
-| CodeNotes | https://github.com/CanisOris |
-
+| Depreciated | https://github.com/CanisOris/JAVASCRIPT-PROJECTS/blob/main/Basic%20JavaScript%20Projects/Project1_expressions_alert/Toolbox/js_depreciated.html |
 
 
 ---
