@@ -40,3 +40,11 @@ switch (str) {
         default:
             return number;
     }
+
+function getNot(btnElement, a, b) {
+    // use dom to get next 
+    const outputDiv = btnElement.nextElementSibling;
+    const result = (a != b);
+    // write it to the div
+    outputDiv.innerText = result;
+}
