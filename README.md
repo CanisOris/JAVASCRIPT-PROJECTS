@@ -6,7 +6,7 @@ Javascript Assignments
 
 | Project | Overview |
 | :--  | :-- |
-| [1st Assi](#) | unknown |
+| [Assignments](#Project1_expressions_alert) | Project1_expressions_alert |
 | [blank](#blank) | blank |
 | [blank](#blank) | blank |
 | [blank](#blank) | blank |
@@ -22,7 +22,7 @@ Javascript Assignments
 
 | Platform | Profile |
 | :-- | :-- |
-| Assignment 1 | https://github.com/CanisOris/JAVASCRIPT-PROJECTS/tree/main/Basic%20JavaScript%20Projects/Project1_expressions_alert (Basic JavaScript Projects Submission Assignment)|
+| Project1_expressions_alert | https://github.com/CanisOris/JAVASCRIPT-PROJECTS/tree/main/Basic%20JavaScript%20Projects/Project1_expressions_alert |
 
 
 ---
