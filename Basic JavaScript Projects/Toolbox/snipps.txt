@@ -1,5 +1,15 @@
 
 
+=========================
+notes
+
+Type Coercion = cast
+
+
+
+=========================
+snipps
+
  var timestamp = `[${new Date().toLocaleTimeString()}]`;
 
  msgdiv.insertAdjacentHTML('beforeend', `<div>${msg} ${timestamp}</div>`);
