@@ -32,7 +32,7 @@ Javascript Assignments
 
 | Platform | Profile |
 | :-- | :-- |
-| Depreciated | https://github.com/CanisOris/JAVASCRIPT-PROJECTS/blob/main/Basic%20JavaScript%20Projects/Project1_expressions_alert/Toolbox/js_depreciated.html |
+| Depreciated JS | https://github.com/CanisOris/JAVASCRIPT-PROJECTS/blob/main/Basic%20JavaScript%20Projects/Toolbox/js_depreciated.html |
 
 
 ---
