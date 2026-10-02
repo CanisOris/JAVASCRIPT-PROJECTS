@@ -12,6 +12,13 @@ Javascript Assignments
 | [Connect](#connect) | Connect with me |
 
 ---
+## Toolbox
+
+**My JS Toolbox**
+
+| Platform | Profile |
+| :-- | :-- |
+| CodeNotes | https://github.com/CanisOris |
 
 
 

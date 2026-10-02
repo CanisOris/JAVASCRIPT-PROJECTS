@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Troubleshooting Notes</title>
+    <style>
+        body {
+            font-family: system-ui, -apple-system, sans-serif;
+            line-height: 1.6;
+            max-width: 850px;
+            margin: 0 auto;
+            padding: 20px;
+            color: #1f2937;
+            background-color: #f9fafb;
+        }
+        h1 {
+            color: #111827;
+            border-bottom: 3px solid #3b82f6;
+            padding-bottom: 10px;
+        }
+        h2 {
+            color: #1d4ed8;
+            margin-top: 0;
+        }
+        h3 {
+            color: #2563eb;
+        }
+        code {
+            background-color: #e5e7eb;
+            color: #ef4444;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 0.9em;
+        }
+        pre {
+            background-color: #1f2937;
+            color: #e5e7eb;
+            padding: 15px;
+            border-radius: 8px;
+            overflow-x: auto;
+        }
+        pre code {
+            background-color: transparent;
+            color: inherit;
+            padding: 0;
+        }
+        .note-card {
+            background: #ffffff;
+            border: 1px solid #e5e7eb;
+            border-radius: 8px;
+            padding: 25px;
+            margin-bottom: 25px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+        .error-text {
+            background-color: #fee2e2;
+            color: #991b1b;
+            padding: 10px;
+            border-left: 4px solid #ef4444;
+            margin-bottom: 15px;
+            font-family: monospace;
+            font-size: 0.85em;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>JavaScript Depreciated</h1>
+
+    <div class="note-card">
+        <h2>Modern Alternatives to document.write()</h2>
+        <p><code>document.write()</code> is deprecated because it blocks page parsing and can entirely overwrite the document if called after the page loads. Use these methods instead:</p>
+
+        <h3>Method A: textContent (Safest)</h3>
+        <p>Use for plain text. Highly secure against Cross-Site Scripting (XSS) because it refuses to parse HTML tags.</p>
+<pre><code>const container = document.getElementById('message-container');
+container.textContent = "Hello, world!";</code></pre>
+
+        <h3>Method B: innerHTML</h3>
+        <p>Use when you need to render actual HTML tags from a string. <em>Warning: Do not use with untrusted user input.</em></p>
+<pre><code>const container = document.getElementById('message-container');
+container.innerHTML = "&lt;strong&gt;Hello, world!&lt;/strong&gt;";</code></pre>
+
+        <h3>Method C: createElement & appendChild</h3>
+        <p>The standard programmatic way to build, configure, and insert new elements dynamically.</p>
+<pre><code>// Create a new paragraph element
+const newPara = document.createElement('p');
+newPara.textContent = "This is a new paragraph.";
+newPara.style.color = "blue"; 
+
+// Append it to the body
+document.body.appendChild(newPara);</code></pre>
+
+        <h3>Method D: insertAdjacentHTML</h3>
+        <p>Injects an HTML string precisely without overwriting existing child elements.</p>
+<pre><code>const list = document.getElementById('my-list');
+// Inserts right inside the element, after its last child
+list.insertAdjacentHTML('beforeend', '&lt;li&gt;New Item&lt;/li&gt;');</code></pre>
+    </div>
+
+</body>
+</html>
+
+```
