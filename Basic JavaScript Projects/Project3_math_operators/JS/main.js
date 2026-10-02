@@ -45,16 +45,22 @@ function doRandom(a, b) {
 
 // MATH FUNCS
 // using Math.floor(math object)
-function calcRandom(a,b) {
+function calcRandom(a, b) {
     return Math.floor(Math.random() * a) + b;
 }
 
+// I would probably put try catches around all of them
+// It looks like it will take a little to figure out how to bubble up the errors
 function calcPercentage(a, b) {
-    // no div by zero
-    if (b === 0) return "0%";
-    const percent = (a / b) * 100;
-    // round 2 dec
-    return percent.toFixed(0) + "%";
+    try {
+        // no div by zero
+        if (b === 0) return "0%";
+        const percent = (a / b) * 100;
+        // round 2 dec
+        return percent.toFixed(0) + "%";
+    } catch (error) {
+        return error.message;
+    }
 }
 
 function calcModulus(a, b) {
