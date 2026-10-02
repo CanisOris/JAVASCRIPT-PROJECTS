@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Changa+One:ital@0;1&display=swap');
+
+/* ###################################################
+ COLORS
+ ################################################### */
+:root {
+
+
+    --body-bg: #12162A;
+    --col-card-bg: #3E2D1F;
+    --body-text: #F9F7EF;
+
+  
+}
+
+
+/* ###################################################
+                    BASE SETUP
+ ################################################### */
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding-top: 0;
+    box-sizing: border-box;
+    /* margin negatives not needed */
+}
+
+html {
+    /* remove scroll bar x */
+    overflow-x: hidden;
+    /* smooth your scroll, ohh yeah */
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Pangolin", cursive;
+    font-size: 24px;
+    margin: 0;
+    padding: 0;
+    background-color: var(--body-bg);
+    color: var(--body-text);
+
+    /* push the footer down */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+

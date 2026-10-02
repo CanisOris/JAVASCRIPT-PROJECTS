@@ -25,7 +25,7 @@ Javascript Assignments
 | Project1_expressions_alert | https://github.com/CanisOris/JAVASCRIPT-PROJECTS/tree/main/Basic%20JavaScript%20Projects/Project1_expressions_alert |
 | Project2_functions | https://github.com/CanisOris/JAVASCRIPT-PROJECTS/tree/main/Basic%20JavaScript%20Projects/Project2_functions |
 | Project3_math_operators | https://github.com/CanisOris/JAVASCRIPT-PROJECTS/tree/main/Basic%20JavaScript%20Projects/Project3_math_operators |
-
+| Project4_dictionaries | https://github.com/CanisOris/JAVASCRIPT-PROJECTS/tree/main/Basic%20JavaScript%20Projects/Project4_dictionaries |
 
 ---
 ## Toolbox

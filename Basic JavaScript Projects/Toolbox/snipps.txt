@@ -1,0 +1,32 @@
+
+
+ var timestamp = `[${new Date().toLocaleTimeString()}]`;
+
+ msgdiv.insertAdjacentHTML('beforeend', `<div>${msg} ${timestamp}</div>`);
+
+ var my_objectMethod = {
+    NodeId: 2,
+    NodePid: 0,
+    NodeName: "Branch1",
+    NodeConnectCnt: 0,
+    NodeConnectMax: GetMaxConnections()
+};
+
+
+Object.assign(my_object, {
+    NodeName: "Branch_Updated",
+    NodeConnectCnt: NodeConnCnt(my_object.NodeId),
+    NodePid: 1
+})
+
+
+switch (str) {
+        case '-': // Negation
+            return -number;
+        case '++': // Increment
+            return ++number;
+        case '--': // Decrement
+            return --number;
+        default:
+            return number;
+    }
