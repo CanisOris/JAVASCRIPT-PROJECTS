@@ -30,17 +30,47 @@
         </div>
         <div class="flex-box">
             <h4 class="box-title">Slice() Method Assignment</h4>
-            <p>I tried to tell a joke about slicing bread, but it got a little crusty around the edges</p>
+            <p class="body-text">I tried to tell a joke about slicing bread, but it got a little crusty around the edges
+            </p>
             <button onclick="getSliceNDice(this)">Chop Chop!</button>
-            <div></div>
+            <div class="body-text"></div>
+            <!-- <button onclick="toggleModal('alertModal')">Find Me!</button> -->
+<a onclick="toggleModal('alertModal')">View Code</a>
+            <!-- The Modal Background (Hidden by default) -->
+            <div id="alertModal" class="modal">
+
+                <!-- Modal Box -->
+                <div class="modal-content">
+                    <!-- ==== required ===== -->
+                  
+                    <div>
+                        <pre>
+                            <code>
+// note starts at 1 not 0 well unless my manual count was off. :)
+function getSliceNDice(btnElement) {
+    const outputDiv = btnElement.nextElementSibling;
+    const dice = "I tried to tell a joke about slicing bread, but it got a little crusty around the edges";
+    const slice = dice.slice(29,37);
+    outputDiv.innerText = slice;
+}
+                            </code>
+                        </pre>
+                    </div>
+                    <!-- Toggle off -->
+                    <button onclick="toggleModal('alertModal')">Close</button>
+                </div>
+
+            </div>
+
 
         </div>
 
         <div class="flex-box">
             <h4 class="box-title">More Methods Challenge</h4>
-            <p>I tried to tell a joke about slicing bread, but it got a little crusty around the edges</p>
+            <p class="body-text">I tried to tell a joke about slicing bread, but it got a little crusty around the edges
+            </p>
             <button onclick="getCaseOfIdentity(this)">Case of the missing slice</button>
-            <div></div>
+            <div class="body-text"></div>
 
         </div>
 

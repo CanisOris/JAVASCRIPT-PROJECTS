@@ -77,7 +77,7 @@ function toggleModal(modalId) {
     // 2. Define the nested function to handle UI updates
     function setDisplayState(cssValue) {
         // Because of lexical scoping, it can directly access 'modalElement'
-        document.getElementById('Found').innerHTML = "You Found Me!!";
+        //document.getElementById('Found').innerHTML = "You Found Me!!";
         modalElement.style.display = cssValue;
     }
     // toggle
