@@ -29,7 +29,7 @@ Javascript Assignments
 | Project5_comparisons_type_coercion | https://github.com/CanisOris/JAVASCRIPT-PROJECTS/tree/main/Basic%20JavaScript%20Projects/Project5_comparisons_type_coercion |
 | Project6_ternary__operators_constructors | https://github.com/CanisOris/JAVASCRIPT-PROJECTS/tree/main/Basic%20JavaScript%20Projects/Project6_ternary__operators_constructors |
 | Project7_scope_time_function | https://github.com/CanisOris/JAVASCRIPT-PROJECTS/tree/main/Basic%20JavaScript%20Projects/Project7_scope_time_function |
-
+| Project8_string_methods | https://github.com/CanisOris/JAVASCRIPT-PROJECTS/tree/main/Basic%20JavaScript%20Projects/Project8_string_methods |
 
 
 ---
