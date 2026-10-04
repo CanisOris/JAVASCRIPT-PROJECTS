@@ -7,7 +7,6 @@ Javascript Assignments
 | Project | Overview |
 | :--  | :-- |
 | [JSProjects](#JSProjects) |  |
-| [Toolbox](#Toolbox) | Toolbox |
 | [Portfolio](#portfolio) | Portfolio Project |
 | [Connect](#connect) | Connect with me |
 
@@ -22,18 +21,8 @@ Javascript Assignments
 | Web   | https://canisoris.github.io/JAVASCRIPT-PROJECTS/Basic%20JavaScript%20Projects/ |
 | Files | https://github.com/CanisOris/JAVASCRIPT-PROJECTS/tree/main/Basic%20JavaScript%20Projects/ |
 
----
-## Toolbox
-
-**My JS Toolbox**
-
-| Platform | Profile |
-| :-- | :-- |
-| Depreciated JS | https://github.com/CanisOris/JAVASCRIPT-PROJECTS/blob/main/Basic%20JavaScript%20Projects/Toolbox/js_depreciated.html |
-
 
 ---
-
 ## Connect
 
 **Matthew Stewart**
