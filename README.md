@@ -7,9 +7,6 @@ Javascript Assignments
 | Project | Overview |
 | :--  | :-- |
 | [JSProjects](#JSProjects) |  |
-| [blank](#blank) | blank |
-| [blank](#blank) | blank |
-| [blank](#blank) | blank |
 | [Toolbox](#Toolbox) | Toolbox |
 | [Portfolio](#portfolio) | Portfolio Project |
 | [Connect](#connect) | Connect with me |
