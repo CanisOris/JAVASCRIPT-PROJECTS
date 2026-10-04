@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<html>
+
+<head>
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <link rel="stylesheet" type="text/css" href="./style/CSS_File.css">
+    <script src="./js/async.js" ></script>
+    <!-- <script src="./js/async.js" defer></script> -->
+</head>
+
+<body>
+    <!-- <script src="./js/async.js" async></script> -->
+    <p id="p1">Hello World </p>
+    <br>
+    <div style="font-size: .8em;">
+        <p>Both <code>defer</code> and <code>async</code> instruct the browser to download a JavaScript file in the
+            background without blocking the HTML parser. The difference lies entirely in <strong>when the script
+                executes</strong> and <strong>whether the execution order is maintained</strong>.</p>
+
+        <table border="1" style="border-collapse: collapse; text-align: left;">
+            <thead>
+                <tr>
+                    <th style="padding: 8px;">Feature</th>
+                    <th style="padding: 8px;"><code>defer</code></th>
+                    <th style="padding: 8px;"><code>async</code></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td style="padding: 8px;"><strong>Download Behavior</strong></td>
+                    <td style="padding: 8px;">Asynchronous (non-blocking).</td>
+                    <td style="padding: 8px;">Asynchronous (non-blocking).</td>
+                </tr>
+                <tr>
+                    <td style="padding: 8px;"><strong>Execution Timing</strong></td>
+                    <td style="padding: 8px;">Waits until HTML parsing is completely finished (just before
+                        <code>DOMContentLoaded</code>).
+                    </td>
+                    <td style="padding: 8px;">Executes immediately once the download completes, pausing HTML parsing to
+                        run.
+                    </td>
+                </tr>
+                <tr>
+                    <td style="padding: 8px;"><strong>Execution Order</strong></td>
+                    <td style="padding: 8px;">Guaranteed to run in the exact order they appear in the HTML document.
+                    </td>
+                    <td style="padding: 8px;">Unpredictable. Runs as soon as the file is ready, regardless of document
+                        order.</td>
+                </tr>
+                <tr>
+                    <td style="padding: 8px;"><strong>DOM Availability</strong></td>
+                    <td style="padding: 8px;">Guaranteed (the entire DOM is constructed).</td>
+                    <td style="padding: 8px;">Not guaranteed (HTML parsing is likely still underway when the script
+                        runs).
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <p><strong>When to use <code>defer</code>:</strong></p>
+        <ul>
+            <li>The script relies on the DOM being fully loaded (e.g., attaching event listeners to UI elements).</li>
+            <li>The script has dependencies on other scripts (e.g., your <code>app.js</code> needs
+                <code>vendor.js</code> to
+                run first).</li>
+        </ul>
+
+        <p><strong>When to use <code>async</code>:</strong></p>
+        <ul>
+            <li>The script is completely independent and does not interact with the DOM or other scripts (e.g., Google
+                Analytics, tracking pixels, or third-party ad networks).</li>
+            <li>Getting the script running as fast as possible is the only priority, regardless of order.</li>
+        </ul>
+    </div>
+    <!-- <script src="./js/async.js" defer></script> -->
+    <!-- <script src="./js/async.js" ></script> -->
+</body>
+
+</html>
