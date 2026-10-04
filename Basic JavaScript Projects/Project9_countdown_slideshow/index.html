@@ -24,16 +24,17 @@
 
 <body id="body_style">
     <header>
-        <h1>Project7_scope_time_function</h1>
+        <h1>Project9_countdown_slideshow</h1>
     </header>
 
     <main>
         <div class="button-grid">
-            <p>How many seconds would you like to set your alarm for?</p>
-            <input id="seconds" value="" />
-            <button onclick="countdown()">Click Here</button>
-            <p id="timer"></p>
-
+            <div class="flex-box">
+                <p>How many seconds would you like to set your alarm for?</p>
+                <input id="seconds" value="" style="margin-bottom: 12px;"/>
+                <button onclick="countdown()">Click Here</button>
+                <p id="timer"></p>
+            </div>
             <div class="flex-box">
                 <h4 class="box-title">Local and Global Variable Assignment</h4>
                 <button onclick="getAreaSquare(this)">get square (ref error)</button>
