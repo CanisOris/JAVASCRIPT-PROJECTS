@@ -16,19 +16,10 @@ Javascript Assignments
 ## JSProjects
 
 **Basic JavaScript Projects**
-https://canisoris.github.io/JAVASCRIPT-PROJECTS/Basic%20JavaScript%20Projects/
-
-| Platform | Profile |
+| Type | Link |
 | :-- | :-- |
-| Project1_expressions_alert | https://github.com/CanisOris/JAVASCRIPT-PROJECTS/tree/main/Basic%20JavaScript%20Projects/Project1_expressions_alert |
-| Project2_functions | https://github.com/CanisOris/JAVASCRIPT-PROJECTS/tree/main/Basic%20JavaScript%20Projects/Project2_functions |
-| Project3_math_operators | https://github.com/CanisOris/JAVASCRIPT-PROJECTS/tree/main/Basic%20JavaScript%20Projects/Project3_math_operators |
-| Project4_dictionaries | https://github.com/CanisOris/JAVASCRIPT-PROJECTS/tree/main/Basic%20JavaScript%20Projects/Project4_dictionaries |
-| Project5_comparisons_type_coercion | https://github.com/CanisOris/JAVASCRIPT-PROJECTS/tree/main/Basic%20JavaScript%20Projects/Project5_comparisons_type_coercion |
-| Project6_ternary__operators_constructors | https://github.com/CanisOris/JAVASCRIPT-PROJECTS/tree/main/Basic%20JavaScript%20Projects/Project6_ternary__operators_constructors |
-| Project7_scope_time_function | https://github.com/CanisOris/JAVASCRIPT-PROJECTS/tree/main/Basic%20JavaScript%20Projects/Project7_scope_time_function |
-| Project8_string_methods | https://github.com/CanisOris/JAVASCRIPT-PROJECTS/tree/main/Basic%20JavaScript%20Projects/Project8_string_methods |
-| Project9_countdown_slideshow | https://github.com/CanisOris/JAVASCRIPT-PROJECTS/tree/main/Basic%20JavaScript%20Projects/Project9_countdown_slideshow |
+| Files | https://canisoris.github.io/JAVASCRIPT-PROJECTS/Basic%20JavaScript%20Projects/ |
+| Web   | https://github.com/CanisOris/JAVASCRIPT-PROJECTS/tree/main/Basic%20JavaScript%20Projects/ |
 
 ---
 ## Toolbox
