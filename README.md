@@ -19,8 +19,8 @@ Javascript Assignments
 
 | Type | Link |
 | :-- | :-- |
-| Files | https://canisoris.github.io/JAVASCRIPT-PROJECTS/Basic%20JavaScript%20Projects/ |
-| Web   | https://github.com/CanisOris/JAVASCRIPT-PROJECTS/tree/main/Basic%20JavaScript%20Projects/ |
+| Web   | https://canisoris.github.io/JAVASCRIPT-PROJECTS/Basic%20JavaScript%20Projects/ |
+| Files | https://github.com/CanisOris/JAVASCRIPT-PROJECTS/tree/main/Basic%20JavaScript%20Projects/ |
 
 ---
 ## Toolbox
@@ -42,6 +42,6 @@ Javascript Assignments
 | :-- | :-- |
 | GitHub | https://github.com/CanisOris |
 | LinkedIn | https://www.linkedin.com/in/stewart-matthew-profile/ |
-| Portfolio | https://github.com/CanisOris/Portfolio |
+| Portfolio | https://canisoris.github.io/Portfolio/ |
 
 
