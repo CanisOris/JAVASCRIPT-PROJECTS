@@ -2,26 +2,46 @@
 <html lang="en">
 
 <head>
-    <title>js stuff</title>
-    <meta charset="utf-8" />
+    <title>js debug code</title>
+    <meta charset="UTF-8" />
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
     <meta http-equiv="Pragma" content="no-cache" />
     <meta http-equiv="Expires" content="0" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <!-- --------------------------------------------------------- -->
-     <script src="/JAVASCRIPT-PROJECTS/Basic%20JavaScript%20Projects/js1/site.js" defer></script>
+    <script src="/JAVASCRIPT-PROJECTS/Basic%20JavaScript%20Projects/js1/site.js" defer></script>
 </head>
 
 <body onload="pageLoad()">
-    <scirpt >
-        // Page Load Greeting
-        function pageLoad(){
-            var greeting = "Learn ";
+    <h1 id="page-title"></h1>
+
+    <button onclick="clickCount()">Counter</button>
+    <button onclick="resetCount()">Reset Counter</button>
+<p id="counter"></p>
+    <script>
+
+        function pageLoad() {
+            let greeting = "Learn ";
             greeting += "Degbug ";
             greeting += "Console Tools!";
             window.alert(greeting);
         }
-    </scirpt>
+
+        var count = 0;
+        function clickCount() {
+            count++;
+            document.getElementById("counter").innerHTML = count;
+
+
+        }
+
+        function resetCount() {
+            var count = "";
+            document.getElementById("counter").innerHTML = count;
+        }
+    </script>
+
+
 </body>
 
 </html>

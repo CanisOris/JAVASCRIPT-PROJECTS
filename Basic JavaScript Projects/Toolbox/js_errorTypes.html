@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Code Snippets</title>
+    <style>
+        :root {
+            --bg-color: #121212;
+            --card-bg: #1e1e1e;
+            --text-main: #d4d4d4;
+            --accent-blue: #569cd6;
+            --accent-orange: #ce9178;
+            --accent-green: #4ade80;
+            --border-color: #333;
+        }
+
+        body {
+            font-family: system-ui, -apple-system, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            margin: 0;
+            padding: 30px;
+            line-height: 1.6;
+        }
+
+        header {
+            margin-bottom: 40px;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 15px;
+        }
+
+        h1 {
+            color: var(--accent-blue);
+            margin: 0;
+            font-size: 2.2rem;
+        }
+
+        /* Spatial Grid Layout for visual organization */
+        .snippet-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+            gap: 25px;
+        }
+
+        .snippet-card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .snippet-card h2 {
+            margin-top: 0;
+            color: var(--accent-green);
+            font-size: 1.3rem;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 10px;
+        }
+
+        .snippet-card h3 {
+            color: var(--text-main);
+            font-size: 1rem;
+            margin: 15px 0 5px 0;
+        }
+
+        p {
+            margin: 0 0 15px 0;
+            font-size: 0.95rem;
+            color: #a3a3a3;
+        }
+
+        pre {
+            background-color: #000000;
+            padding: 15px;
+            border-radius: 6px;
+            overflow-x: auto;
+            margin: 0;
+            border: 1px solid #2d2d2d;
+        }
+
+        code {
+            font-family: 'Consolas', 'Monaco', monospace;
+            font-size: 0.9rem;
+        }
+
+        /* Syntax Highlighting Colors */
+        .keyword {
+            color: #c586c0;
+        }
+
+        /* let, var, const, function */
+        .variable {
+            color: #9cdcfe;
+        }
+
+        .string {
+            color: var(--accent-orange);
+        }
+
+        .comment {
+            color: #6a9955;
+            font-style: italic;
+        }
+
+        .template {
+            color: var(--accent-orange);
+        }
+
+        .template-expr {
+            color: #569cd6;
+        }
+
+        /* ${} */
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>JavaScript Reference Vault</h1>
+        <p>A visual repository of syntax, patterns, and code snippets.</p>
+    </header>
+
+    <div class="snippet-grid">
+<pre>
+Error: The generic base object for all built-in error types. It is often used by developers to create and throw custom exceptions.
+
+SyntaxError: Thrown when the JavaScript engine attempts to parse code that violates the language's syntax rules (e.g., a missing bracket, unclosed string, or misspelled keyword).
+
+ReferenceError: Occurs when code attempts to access a variable that does not exist or has not been initialized in the current scope.
+
+TypeError: Triggered when an operation is performed on a value of the wrong type (e.g., trying to call a string as a function, invoking a method that doesn't exist, or accessing a property of null or undefined).
+
+RangeError: Thrown when a numeric value or parameter falls outside of its valid, allowed range (e.g., creating an array with a negative length or passing an invalid radix to Number.toString()).
+
+URIError: Happens when global URI handling functions, such as decodeURIComponent() or encodeURI(), are passed malformed URIs.
+
+AggregateError: Wraps multiple individual errors into a single object. This is most commonly thrown by operations like Promise.any() when all promises passed to an iterable are rejected.
+
+EvalError: Historically used to indicate errors regarding the global eval() function. Modern JavaScript engines no longer throw this error, but it remains in the specification for backward compatibility.    
+</pre>
+        
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>
