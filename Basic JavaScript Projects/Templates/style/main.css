@@ -57,7 +57,26 @@ header h1 {
     overflow-wrap: anywhere;
 
 }
+p {
+    font-family: Perpetua, Rockwell Extra Bold;
+    /* text-align: justify; */
 
+    letter-spacing: 1px;
+    font-size: 20px;
+    padding-left: 20px;
+
+    padding-right: 20px;
+    font-size: clamp(1rem, 1.5vw, 1.25rem);
+    text-align: left;
+    padding: 0;
+
+}
+
+
+
+a {
+    color: var(--accent-gold);
+}
 /* ###################################################
                     LAYOUT & FLEXBOX
  ################################################### */
@@ -78,7 +97,7 @@ header h1 {
     background-color: var(--col-card-bg);
     padding: 20px;
     border-radius: 8px;
-    text-align: center;
+    text-align: left;
 
 }
 
