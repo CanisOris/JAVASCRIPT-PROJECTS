@@ -16,6 +16,7 @@ Javascript Assignments
 ## JSProjects
 
 **Basic JavaScript Projects**
+
 | Type | Link |
 | :-- | :-- |
 | Files | https://canisoris.github.io/JAVASCRIPT-PROJECTS/Basic%20JavaScript%20Projects/ |
