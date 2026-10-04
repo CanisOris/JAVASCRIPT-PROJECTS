@@ -30,7 +30,7 @@ Javascript Assignments
 | Project6_ternary__operators_constructors | https://github.com/CanisOris/JAVASCRIPT-PROJECTS/tree/main/Basic%20JavaScript%20Projects/Project6_ternary__operators_constructors |
 | Project7_scope_time_function | https://github.com/CanisOris/JAVASCRIPT-PROJECTS/tree/main/Basic%20JavaScript%20Projects/Project7_scope_time_function |
 | Project8_string_methods | https://github.com/CanisOris/JAVASCRIPT-PROJECTS/tree/main/Basic%20JavaScript%20Projects/Project8_string_methods |
-
+| Project9_countdown_slideshow | https://github.com/CanisOris/JAVASCRIPT-PROJECTS/tree/main/Basic%20JavaScript%20Projects/Project9_countdown_slideshow |
 
 ---
 ## Toolbox

@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Changa+One:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
+
+
+
+/* ###################################################
+ COLORS
+ ################################################### */
+:root {
+
+
+    --body-bg: #12162A;
+    --col-card-bg: #3E2D1F;
+    --body-text: #F9F7EF;
+
+
+}
+
+
+/* ###################################################
+                    BASE SETUP
+ ################################################### */
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding-top: 0;
+    box-sizing: border-box;
+}
+
+html {
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Pangolin", cursive;
+    font-size: 24px;
+    margin: 0;
+    padding: 0;
+    background-color: var(--body-bg);
+    color: var(--body-text);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header h1 {
+
+    text-transform: capitalize;
+    font-family: "Orbitron", sans-serif;
+    text-align: center;
+    margin-top: .5%;
+    color: var(--text-bright);
+    font-size: clamp(1.5rem, 3vw, 2.5rem);
+    overflow-wrap: anywhere;
+
+}
+
+/* ###################################################
+                    LAYOUT & FLEXBOX
+ ################################################### */
+
+.button-grid {
+    padding: 22px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    align-items: start;
+    /* grow vertically */
+}
+
+.flex-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--col-card-bg);
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+
+}
+
+.flex-box .box-title {
+
+    margin-bottom: .5%;
+
+    font-size: clamp(.8rem, 3vw, 1.4.5rem);
+    letter-spacing: 1px;
+    border-bottom: 2px solid var(--body-text);
+    width: 100%;
+    padding-bottom: 10px;
+}
+
+.flex-box button {
+    font-family: inherit;
+    font-size: 16px;
+    padding: 10px 15px;
+    margin-bottom: 5px;
+    background-color: var(--body-text);
+    color: var(--body-bg);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    max-width: 200px;
+}
+
+
+.flex-box div {
+    font-size: 18px;
+    min-height: 27px;
+    margin-bottom: 15px;
+    word-break: break-word;
+}
+
+.flex-box .body-text {
+    margin-bottom: .5%;
+
+    font-size: clamp(.5rem, 3vw, 1.4rem);
+    letter-spacing: 1px;
+    border-bottom: 2px solid var(--body-text);
+    width: 100%;
+    padding-bottom: 10px;
+}
