@@ -18,7 +18,8 @@ Javascript Assignments
 ---
 ## JSProjects
 
-**My JS Projects**
+**Basic JavaScript Projects**
+https://canisoris.github.io/JAVASCRIPT-PROJECTS/Basic%20JavaScript%20Projects/
 
 | Platform | Profile |
 | :-- | :-- |
