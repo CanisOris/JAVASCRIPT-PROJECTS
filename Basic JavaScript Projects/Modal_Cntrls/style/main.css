@@ -121,7 +121,7 @@ body {
     cursor: pointer;
     line-height: 1;
     width: 90px;
-    max-width: auto;
+    
 }
 
 .close-btn:hover {
