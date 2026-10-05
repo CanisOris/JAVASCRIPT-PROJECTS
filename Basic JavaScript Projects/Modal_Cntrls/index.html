@@ -34,13 +34,12 @@
                     <!-- The Modal Background (Hidden by default) -->
                     <!-- TOGGLE ON/OFF -->
                     <div id="alertModal" class="modal">
-                        <!-- Modal Box -->
                         <div class="modal-content">
+                            <!-- New Close X Button -->
+                            <button class="close-btn" onclick="toggleModal('alertModal')">&times;</button>
+
                             <h2>Process Complete</h2>
                             <p>Your calculation has finished successfully.</p>
-
-                            <!-- Toggle off/close -->
-                            <button onclick="toggleModal('alertModal')">Close</button>
                         </div>
                     </div>
 
@@ -70,13 +69,14 @@
                 </div>
 
             </div>
-<div class="flex-box">
+            <div class="flex-box">
                 <!-- =================================================================== -->
                 <!-- SWITCH & WINDOW -->
                 <!-- =================================================================== -->
                 <div>
                     <!-- <button onclick="toggleModal('alertModal2')">Open Modal</button> -->
-                    <button onclick="toggleModal('alertModal', roundedParagraphConfig, event)">Open Paragraph Popup</button>
+                    <button onclick="toggleModal('alertModal', roundedParagraphConfig, event)">Open Paragraph
+                        Popup</button>
 
                     <!-- The Modal Background (Hidden by default) -->
                     <!-- TOGGLE ON/OFF -->

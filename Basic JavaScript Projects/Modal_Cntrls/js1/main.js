@@ -82,7 +82,7 @@ const roundedParagraphConfig = {
         height: "80px" 
     },
     location: { 
-        useClickPosition: true, // Triggers the absolute positioning logic
+        useClickPosition: true, // trigger click - button, link, ...
 
         offsetX: -140,            // Shifts 15px to the right of the click
         offsetY: 0             // Shifts 25px below the click so it doesn't block the cursor
