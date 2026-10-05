@@ -28,8 +28,8 @@
                 <!-- SWITCH & WINDOW -->
                 <!-- =================================================================== -->
                 <div>
-                    <button onclick="toggleModal('alertModal')">Open Modal</button>
-
+                    <!-- <button onclick="toggleModal('alertModal')">Open Modal</button> -->
+                    <button onclick="toggleModal('alertModal', warningConfig)">Open Warning Modal</button>
 
                     <!-- The Modal Background (Hidden by default) -->
                     <!-- TOGGLE ON/OFF -->
@@ -51,12 +51,12 @@
                 <!-- SWITCH & WINDOW -->
                 <!-- =================================================================== -->
                 <div>
-                    <button onclick="toggleModal('alertModal2')">Open Modal</button>
-
+                    <!-- <button onclick="toggleModal('alertModal2')">Open Modal</button> -->
+                    <button onclick="toggleModal('alertModal2', sidePanelConfig)">Open Side Panel Modal</button>
 
                     <!-- The Modal Background (Hidden by default) -->
                     <!-- TOGGLE ON/OFF -->
-                    <div id="alertModal" class="modal">
+                    <div id="alertModal2" class="modal">
                         <!-- Modal Box -->
                         <div class="modal-content">
                             <h2>Process Complete</h2>
