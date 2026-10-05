@@ -26,3 +26,18 @@
     border: 1px solid #5e81ac;
     text-align: center;
 }
+
+.modal-fill {
+    width: 95vw;
+    height: 95vh;
+    max-width: none;
+    overflow-y: auto;
+    text-align: left;
+    background-color: hsl(var(--clr-neutral-200));
+    font-family: "Barlow Semi Condensed", sans-serif;
+}
+
+.modal-fill .testimonial-grid {
+    width: 100%;
+    margin: 0;
+}

@@ -1,17 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <title>Modals</title>
+    <title>Grid & Modals</title>
     <meta charset="utf-8" />
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
     <meta http-equiv="Pragma" content="no-cache" />
     <meta http-equiv="Expires" content="0" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    
+    <!-- Grid Fonts & Styles -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Main Styles & Scripts -->
     <link rel="stylesheet" type="text/css" href="./style/main.css">
     <script src="./js1/main.js" defer></script>
     <script src="/JAVASCRIPT-PROJECTS/Basic%20JavaScript%20Projects/js1/site.js" defer></script>
-
 </head>
 
 <body id="body_style">
@@ -19,85 +25,129 @@
         <h1 id="page-title"></h1>
     </header>
 
-    <main>
-        <div class="button-grid">
-
-            <div class="flex-box">
-                <h4 class="box-title">Assi 5 : Nested Functions Assignment</h4>
-                <!-- =================================================================== -->
-                <!-- SWITCH & WINDOW -->
-                <!-- =================================================================== -->
+    <main class="testimonial-grid">
+        
+        <!-- ARTICLE 1: Warning Modal -->
+        <article class="testimonial grid-col-span-2 flow bg-primary-400 quote text-neutral-100">
+            <div class="flex">
+                <div><img src="./images/image-daniel.jpg" alt="daniel clifford"></div>
                 <div>
-                    <!-- <button onclick="toggleModal('alertModal')">Open Modal</button> -->
-                    <button onclick="toggleModal('alertModal', warningConfig)">Open Warning Modal</button>
-
-                    <!-- The Modal Background (Hidden by default) -->
-                    <!-- TOGGLE ON/OFF -->
-                    <div id="alertModal" class="modal">
-                        <div class="modal-content">
-                            <!-- New Close X Button -->
-                            <button class="close-btn" onclick="toggleModal('alertModal')">&times;</button>
-
-                            <h2>Process Complete</h2>
-                            <p>Your calculation has finished successfully.</p>
-                        </div>
-                    </div>
-
+                    <h2 class="name">Daniel Clifford</h2>
+                    <p class="position">Verified Graduate</p>
                 </div>
             </div>
-            <div class="flex-box">
-                <!-- =================================================================== -->
-                <!-- SWITCH & WINDOW -->
-                <!-- =================================================================== -->
-                <div>
-                    <!-- <button onclick="toggleModal('alertModal2')">Open Modal</button> -->
-                    <button onclick="toggleModal('alertModal2', sidePanelConfig)">Open Side Panel Modal</button>
-
-                    <!-- The Modal Background (Hidden by default) -->
-                    <!-- TOGGLE ON/OFF -->
-                    <div id="alertModal2" class="modal">
-                        <!-- Modal Box -->
-                        <div class="modal-content">
-                            <h2>Process Complete</h2>
-                            <p>Your calculation has finished successfully.</p>
-
-                            <!-- Toggle off/close -->
-                            <button onclick="toggleModal('alertModal2')">Close</button>
-                        </div>
+            <p>I received a job offer mid-course, and the subjects I learned were current, if not more so, in the company I joined. I honestly feel I got every penny’s worth.</p>
+            <p>“ I was an EMT for many years before I joined the bootcamp. I’ve been looking to make a transition and have heard some people who had an amazing experience here. I signed up for the free intro course and found it incredibly fun! I enrolled shortly thereafter. The next 12 weeks was the best - and most grueling - time of my life. Since completing the course, I’ve successfully switched careers, working as a Software Engineer at a VR startup. ”</p>
+            
+            <div style="margin-top: 1.5rem;">
+                <button onclick="toggleModal('alertModal1', warningConfig)">Open Warning Modal</button>
+                <div id="alertModal1" class="modal">
+                    <div class="modal-content">
+                        <button class="close-btn" onclick="toggleModal('alertModal1')">&times;</button>
+                        <h2 style="color: #f9f7ef;">Warning Layout</h2>
+                        <p style="color: #f9f7ef;">Your calculation has finished successfully.</p>
                     </div>
-
                 </div>
-
             </div>
-            <div class="flex-box">
-                <!-- =================================================================== -->
-                <!-- SWITCH & WINDOW -->
-                <!-- =================================================================== -->
+        </article>
+
+        <!-- ARTICLE 2: Side Panel Modal -->
+        <article class="testimonial flow bg-secondary-400 text-neutral-100">
+            <div class="flex">
+                <div><img src="./images/image-jonathan.jpg" alt="Jonathan Walters"></div>
                 <div>
-                    <!-- <button onclick="toggleModal('alertModal2')">Open Modal</button> -->
-                    <button onclick="toggleModal('alertModal', roundedParagraphConfig, event)">Open Paragraph
-                        Popup</button>
-
-                    <!-- The Modal Background (Hidden by default) -->
-                    <!-- TOGGLE ON/OFF -->
-                    <div id="alertModal3" class="modal">
-                        <!-- Modal Box -->
-                        <div class="modal-content">
-                            <h2>Process Complete</h2>
-                            <p>Your calculation has finished successfully.</p>
-
-                            <!-- Toggle off/close -->
-                            <button onclick="toggleModal('alertModal3')">Close</button>
-                        </div>
-                    </div>
-
+                    <h2 class="name">Jonathan Walters</h2>
+                    <p class="position">Verified Graduate</p>
                 </div>
-
             </div>
+            <p>The team was very supportive and kept me motivated</p>
+            <p>“ I started as a total newbie with virtually no coding skills. I now work as a mobile engineer for a big company. This was one of the best investments I’ve made in myself. ”</p>
+            
+            <div style="margin-top: 1.5rem;">
+                <button onclick="toggleModal('alertModal2', sidePanelConfig)">Open Side Panel</button>
+                <div id="alertModal2" class="modal">
+                    <div class="modal-content">
+                        <button class="close-btn" onclick="toggleModal('alertModal2')">&times;</button>
+                        <h2 style="color: #f9f7ef;">Side Panel Layout</h2>
+                        <p style="color: #f9f7ef;">Your calculation has finished successfully.</p>
+                    </div>
+                </div>
+            </div>
+        </article>
 
+        <!-- ARTICLE 3: Paragraph Popup -->
+        <article class="testimonial flow bg-neutral-100 text-secondary-400">
+            <div class="flex">
+                <div><img src="./images/image-jeanette.jpg" alt="Jeanette Harmon"></div>
+                <div>
+                    <h2 class="name">Jeanette Harmon</h2>
+                    <p class="position">Verified Graduate</p>
+                </div>
+            </div>
+            <p>An overall wonderful and rewarding experience</p>
+            <p>“ Thank you for the wonderful experience! I now have a job I really enjoy, and make a good living while doing something I love. ”</p>
+
+            <div style="margin-top: 1.5rem;">
+                <button onclick="toggleModal('alertModal3', roundedParagraphConfig, event)">Open Paragraph Popup</button>
+                <div id="alertModal3" class="modal">
+                    <div class="modal-content">
+                        <button class="close-btn" onclick="toggleModal('alertModal3')">&times;</button>
+                        <h2 style="color: #f9f7ef;">Paragraph Popup</h2>
+                        <p style="color: #f9f7ef;">Your calculation has finished successfully.</p>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        <!-- ARTICLE 4: Standard Modal -->
+        <article class="testimonial grid-col-span-2 flow bg-secondary-500 text-neutral-100">
+            <div class="flex">
+                <div><img class="border-primary-400" src="./images/image-patrick.jpg" alt="Patrick Abrams"></div>
+                <div>
+                    <h2 class="name">Patrick Abrams</h2>
+                    <p class="position">Verified Graduate</p>
+                </div>
+            </div>
+            <p>Awesome teaching support from TAs who did the bootcamp themselves. Getting guidance from them and learning from their experiences was easy.</p>
+            <p>“ The staff seem genuinely concerned about my progress which I find really refreshing. The program gave me the confidence necessary to be able to go out in the world and present myself as a capable junior developer. The standard is above the rest. You will get the personal attention you need from an incredible community of smart and amazing people. ”</p>
+
+            <div style="margin-top: 1.5rem;">
+                <button onclick="toggleModal('alertModal4')">Open Standard Modal</button>
+                <div id="alertModal4" class="modal">
+                    <div class="modal-content">
+                        <button class="close-btn" onclick="toggleModal('alertModal4')">&times;</button>
+                        <h2 style="color: #f9f7ef;">Standard Layout</h2>
+                        <p style="color: #f9f7ef;">Your calculation has finished successfully.</p>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        <!-- ARTICLE 5: Quick Popup -->
+        <article class="testimonial flow bg-neutral-100 text-secondary-400">
+            <div class="flex">
+                <div><img src="./images/image-kira.jpg" alt="Kira Whittle"></div>
+                <div>
+                    <h2 class="name">Kira Whittle</h2>
+                    <p class="position">Verified Graduate</p>
+                </div>
+            </div>
+            <p>Such a life-changing experience. Highly recommended!</p>
+            <p>“ Before joining the bootcamp, I’ve never written a line of code... ”</p>
+
+            <div style="margin-top: 1.5rem;">
+                <button onclick="toggleModal('alertModal5', roundedParagraphConfig, event)">Open Quick Popup</button>
+                <div id="alertModal5" class="modal">
+                    <div class="modal-content">
+                        <button class="close-btn" onclick="toggleModal('alertModal5')">&times;</button>
+                        <h2 style="color: #f9f7ef;">Quick Popup</h2>
+                        <p style="color: #f9f7ef;">Your calculation has finished successfully.</p>
+                    </div>
+                </div>
+            </div>
+        </article>
     </main>
 
     <footer></footer>
 </body>
-
 </html>

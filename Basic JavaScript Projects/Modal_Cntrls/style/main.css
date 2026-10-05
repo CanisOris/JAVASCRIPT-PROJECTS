@@ -43,6 +43,16 @@ body {
     min-height: 100vh;
 }
 
+
+
+
+
+
+
+
+
+
+
 /* ###################################################
                     LAYOUT & FLEXBOX
  ################################################### */
@@ -74,18 +84,41 @@ body {
     padding-bottom: 10px;
 }
 
-.flex-box button {
+/* Styling for buttons inside the new grid */
+.testimonial button {
     font-family: inherit;
     font-size: 16px;
     padding: 10px 15px;
-    margin-bottom: 5px; 
-    background-color: var(--body-text);
-    color: var(--body-bg);
-    border: none;
+    background-color: var(--body-bg);
+    color: var(--body-text);
+    border: 1px solid rgba(255,255,255,0.2);
     border-radius: 5px;
     cursor: pointer;
     width: 100%;
-    max-width: auto;
+    font-weight: bold;
+    transition: opacity 0.2s;
+}
+
+.testimonial button:hover {
+    opacity: 0.85;
+}
+
+/* Corrected X button styling */
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    background: transparent;
+    border: none;
+    color: #88c0d0;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    line-height: 1;
+}
+
+.close-btn:hover {
+    color: #ff8888;
 }
 
 
@@ -108,8 +141,8 @@ body {
 }
 
 /* Styles for the new Close X */
-.flex-box-button 
-    .close-btn {
+/* Styles for the new Close X */
+.close-btn {
     position: absolute;
     top: 10px;
     right: 15px;
@@ -120,10 +153,9 @@ body {
     font-weight: bold;
     cursor: pointer;
     line-height: 1;
-    width: 90px;
-    
 }
 
 .close-btn:hover {
     color: #ff8888;
 }
+
