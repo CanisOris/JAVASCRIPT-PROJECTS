@@ -10,6 +10,17 @@ Type Coercion = cast
 =========================
 snipps
 
+function Call_Loop(btnElement) {
+     const outputDiv = btnElement.nextElementSibling;
+    let result = "empty";
+    outputDiv.innerText = `${result}`;
+}
+
+
+
+
+
+
  var timestamp = `[${new Date().toLocaleTimeString()}]`;
 
  msgdiv.insertAdjacentHTML('beforeend', `<div>${msg} ${timestamp}</div>`);
@@ -48,3 +59,60 @@ function getNot(btnElement, a, b) {
     // write it to the div
     outputDiv.innerText = result;
 }
+
+
+// 1. The 'for' loop
+    // Best for exact counting using a start, condition, and step.
+    console.log("--- 1. for loop ---");
+    for (let i = 0; i < 3; i++) {
+      console.log(`Count: ${i}`); 
+    }
+
+    // 2. The 'while' loop
+    // Runs as long as the condition is true. The condition is checked BEFORE running.
+    console.log("\n--- 2. while loop ---");
+    let w = 0;
+    while (w < 3) {
+      console.log(`While count: ${w}`);
+      w++;
+    }
+
+    // 3. The 'do...while' loop
+    // Runs the code block once FIRST, then repeats if the condition is true.
+    console.log("\n--- 3. do...while loop ---");
+    let d = 0;
+    do {
+      console.log(`Do...while count: ${d}`);
+      d++;
+    } while (d < 3);
+
+    // 4. The 'for...in' loop
+    // Best for extracting the KEYS (property names) from an Object.
+    console.log("\n--- 4. for...in loop ---");
+    const user = { name: "Alice", role: "Developer", status: "Active" };
+    for (const key in user) {
+      console.log(`${key}: ${user[key]}`); 
+    }
+
+    // 5. The 'for...of' loop
+    // Best for extracting the VALUES directly from an Array or String.
+    console.log("\n--- 5. for...of loop ---");
+    const languages = ["HTML", "CSS", "JavaScript"];
+    for (const language of languages) {
+      console.log(language);
+    }
+
+    // 6. The 'for await...of' loop
+    // Used inside async functions to loop through an array of Promises.
+    console.log("\n--- 6. for await...of loop ---");
+    async function processPromises() {
+      // Simulating data that takes time to resolve
+      const asyncData = [
+        Promise.resolve("Data Chunk 1"), 
+        Promise.resolve("Data Chunk 2")
+      ];
+      
+      for await (const chunk of asyncData) {
+        console.log(`Resolved: ${chunk}`);
+      }
+    }
