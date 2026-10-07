@@ -17,8 +17,23 @@ function Call_Loop(btnElement) {
 }
 
 
+//##Object
+class GraphNode {
 
+    constructor() {
+        this.Id = 1;
+        this.Gid = 1;
+        this.Name = "Artificial Intelligence";
+        this.Abreviation = "AI";
+        this.Definition = "A branch of computer science focused on making machines smart enough to perform tasks that usually need human thought.";
+        this.Source = "Google";
+        this.Connections = "112,33,44";
+    }
 
+    getNameDef() {
+        return `${this.Name}(${this.Abreviation}): ${this.Definition}`;
+    }
+}
 
 
  var timestamp = `[${new Date().toLocaleTimeString()}]`;

@@ -22,6 +22,13 @@ Javascript Assignments
 | Files | https://github.com/CanisOris/JAVASCRIPT-PROJECTS/tree/main/Basic%20JavaScript%20Projects/ |
 
 
+**Advanced JavaScript Projectss**
+
+| Type | Link |
+| :-- | :-- |
+| Web   | https://canisoris.github.io/JAVASCRIPT-PROJECTS/advanced%20JavaScript%20Projects/ |
+| Files | https://github.com/CanisOris/JAVASCRIPT-PROJECTS/tree/main/Advanced%20JavaScript%20Projects/ |
+
 ---
 ## Connect
 
