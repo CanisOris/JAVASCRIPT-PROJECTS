@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Running JavaScript in the console</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- serves the CSS stylesheet defining the font rules -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <!-- hosts the actual binary font files referenced inside that stylesheet -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- "preconnect": Tells the browser to initiate the network handshake early. 
+    This performs DNS resolution, TCP handshake, and TLS negotiation ahead of time, 
+    eliminating the round-trip latency when the actual font assets -->
+
+    <link rel="stylesheet" type="text/css" href="./style/main.css">
+    <script src="./js1/main.js" defer></script>
+    <script src="/JAVASCRIPT-PROJECTS/Basic%20JavaScript%20Projects/js1/site.js" defer></script>
+
+</head>
+
+<body id="body_style">
+    <p id="globalVariables" onclick="global()">Global -click here</p>
+    <p id="localVariables" onclick="local()">Local -click here</p>
+    <hr>
+    <p id="concat" onclick="concatenate()">Cat -click here</p>
+    <hr>
+    <button id="concat" onclick="Course()">New Course</button>
+    <p id="displayCourse"></p>
+     <hr>
+    <p id="displayAge"></p>
+    <script>
+        // global vars
+        let a = 3;
+        let b = 4;
+
+        function global() {
+            result = a + b;
+            document.getElementById("globalVariables").innerText =
+                `Global variale a (${a}) plus global variable b (${b}) equals ${result}`;
+        }
+
+        function local() {
+            let c = 4;
+            let d = 3;
+            result = c + d;
+            document.getElementById("localVariables").innerText =
+                `Global variale c (${c}) plus global variable d (${d}) equals ${result}`;
+        }
+
+        let sentence1;
+        let sentence2;
+
+        function concatenate() {
+            let concatSent = sentence1.concat(sentence2);
+            document.getElementById("concat").innerText =
+                `${concatSent}`;
+            console.log(concatSent);
+        }
+
+        function Course(Name, Type, Duration) {
+            try {
+                // **Note: Try catch 
+                // undefined is converted to string then considered an answer / not throw
+                // **Snip: Try catch Test Null and Empty Str
+                if (!Name || !Type || !Duration) {
+                    throw new Error("Missing parameters");
+                }
+                this.courseName = `Cousrse Name: ${Name}`;
+                this.courseType = `Type: ${Type}`;
+                this.courseDur = `Length: ${Duration} hours`;
+            } catch (error) {
+                document.getElementById("displayCourse").innerText = "Required Console Input!!!";
+            }
+        }
+
+        let js = new Course("JavaScirpt", "Code", 55);
+        let py = new Course("Python", "Code", 90);
+
+        let year = prompt("Year born?");
+        let yearNow = new Date().getFullYear();
+        let age = Math.floor(yearNow - year);
+
+    </script>
+
+    <header>
+        <h1 id="page-title"></h1>
+    </header>
+
+
+    <div class="button-grid">
+        <!-- <div class="flex-box">
+            <h4 class="box-title">Loops Assignment</h4>
+            <p id="Out"></p>
+            <button onclick="">Smash</button>
+        </div> -->
+
+    </div>
+
+    <footer></footer>
+</body>
+
+</html>
