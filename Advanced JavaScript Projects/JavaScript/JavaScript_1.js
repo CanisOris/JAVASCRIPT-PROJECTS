@@ -68,3 +68,17 @@ function play1() {
         document.getElementById("result-game1").innerHTML = `I selected ${computerChoice} and you selected ${userChoice}`;
     }
 }
+
+
+function sketch1() {
+
+    const canvas = document.getElementById("myCanvas");
+    const ctx = canvas.getContext("2d");
+    let height = 300;
+    let width = 300;
+    // reminds me of the gdi lib from ibm
+    ctx.strokeStyle = '#e11d48';
+    ctx.lineWidth = 4;
+    ctx.strokeRect(.5, .5, height, width);
+
+}
