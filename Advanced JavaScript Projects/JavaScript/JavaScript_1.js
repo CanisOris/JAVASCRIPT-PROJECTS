@@ -47,4 +47,24 @@ function getMagic8BallResponse() {
 }
 
 
+function play1() {
+    let userChoice = null;
+    document.getElementById("result-game1").innerHTML = "";
+    const choices = document.getElementsByClassName("rps-choice");
+    for (let i = 0; i < choices.length; i++) {
+        if (choices[i].checked) {
+            userChoice = choices[i].value;
+            // looking for single choice so break
+            break;
+        }
+    }
 
+    if (!userChoice) {
+        document.getElementById("result-game1").innerHTML = `I am not sure what kind of hand movements you are making but you have to select something to play :)`;
+    } else {
+        const options = ["Rock", "Paper", "Scissors"];
+        const computerChoice = options[Math.floor(Math.random() * options.length)];
+
+        document.getElementById("result-game1").innerHTML = `I selected ${computerChoice} and you selected ${userChoice}`;
+    }
+}

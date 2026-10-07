@@ -22,6 +22,7 @@ function Call_Loop(btnElement) {
     outputDiv.innerText = `${result}`;
 }
 
+document.getElementById("Greeting").innerHTML = "How are you today?";
 
 //##Object
 class GraphNode {
