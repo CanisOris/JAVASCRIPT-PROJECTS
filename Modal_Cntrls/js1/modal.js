@@ -60,3 +60,22 @@ function toggleModal(modalId, config = {}, event = null) {
         }
     }
 }
+
+
+
+// ++++++++++++++++++++++++++++++++++++++++++++
+// LOADING SPINNER 
+// ++++++++++++++++++++++++++++++++++++++++++++
+
+const loadingSpinnerConfig = {
+    size: { width: "160px", height: "auto" },
+    location: { horizontal: "center", vertical: "center" },
+    style: {
+        backgroundColor: "#1e1e24",
+        color: "#d8dee9",
+        border: "1px solid #3e4451",
+        borderRadius: "12px",
+        padding: "24px 16px",
+        boxShadow: "0 10px 30px rgba(0, 0, 0, 0.5)"
+    }
+};

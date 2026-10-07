@@ -7,8 +7,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Fonts -->
+    <!-- serves the CSS stylesheet defining the font rules -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <!-- hosts the actual binary font files referenced inside that stylesheet -->
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- "preconnect": Tells the browser to initiate the network handshake early. 
+    This performs DNS resolution, TCP handshake, and TLS negotiation ahead of time, 
+    eliminating the round-trip latency when the actual font assets -->
     <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap"
         rel="stylesheet">
 
@@ -17,6 +22,7 @@
 
     <!-- Modal Styles & Scripts -->
     <link rel="stylesheet" type="text/css" href="./style/main.css">
+    <script src="./js1/modal.js" defer></script>
     <script src="./js1/main.js" defer></script>
 </head>
 

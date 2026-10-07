@@ -1,0 +1,93 @@
+
+
+
+
+.modal {
+    /* Hidden by default */
+    display: none; 
+    
+    /* Overlay that covers the whole screen */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); 
+    
+    /* Centers the inner box when display is changed to 'flex' */
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: #2b2b36;
+    padding: 30px;
+    border-radius: 8px;
+    border: 1px solid #5e81ac;
+    text-align: center;
+}
+
+.modal-fill {
+    width: 95vw;
+    height: 95vh;
+    max-width: none;
+    overflow-y: auto;
+    text-align: left;
+    background-color: hsl(var(--clr-neutral-200));
+    font-family: "Barlow Semi Condensed", sans-serif;
+}
+
+.modal-fill .testimonial-grid {
+    width: 100%;
+    margin: 0;
+}
+
+/* // ++++++++++++++++++++++++++++++++++++++++++++
+// LOADING SPINNER 
+// ++++++++++++++++++++++++++++++++++++++++++++ */
+
+.loading-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 9999;
+    
+    /* Centers the modal box horizontally and vertically */
+    justify-content: center;
+    align-items: center;
+}
+
+.spinner-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    
+    /* apply immediately */
+    width: 160px;
+    background-color: #1e1e24;
+    color: #d8dee9;
+    border: 1px solid #3e4451;
+    border-radius: 12px;
+    padding: 24px 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+/* Circular spinning ring */
+.spinner-ring {
+    width: 44px;
+    height: 44px;
+    border: 4px solid rgba(255, 255, 255, 0.2);
+    border-top-color: #61afef;
+    border-radius: 50%;
+    animation: modal-spin 0.8s linear infinite;
+}
+
+@keyframes modal-spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
