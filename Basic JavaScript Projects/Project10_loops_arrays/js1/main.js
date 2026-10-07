@@ -1,14 +1,39 @@
 
 
+function For_wLoop() {
+    var wl_heads = 0;
+    var wl_tails = 0;
+    let max_cnt = 100;
+    let loop_cnt = 0;
 
+    while(loop_cnt < max_cnt){ 
+        // Call the global function directly
+        var land = doFlip(); 
+        
+        if (land === 1 ){
+            // heads
+            ++wl_heads; // Fixed typo
+        } else {
+            // tails
+            ++wl_tails; // Fixed typo
+        }
+        ++loop_cnt;
+    }
+
+    // Assign the values to the textContent property of the elements
+    document.getElementById("wl_heads").textContent = wl_heads.toString(); 
+    document.getElementById("wl_tails").textContent = wl_tails.toString(); 
+}
 
 function calReturn(btnElement) {
     const outputDiv = btnElement.nextElementSibling;
-    outputDiv.innerText = this.doFlip();
+    // Call the global function directly
+    outputDiv.innerText = doFlip(); 
 }
 
 function doFlip() {
-    return Math.random() < 0.5 ? "Heads" : "Tails";
+    // head 1 / tails 0
+    return Math.random() < 0.5 ? 1 : 0;
 }
 
 function constant_function() {
@@ -83,7 +108,7 @@ function Call_Loop(btnElement) {
 function Call_Object(btnElement) {
     const outputDiv = btnElement.nextElementSibling;
     let result = "empty";
-    var myNode1 = new GraphNode();
+    let myNode1 = new GraphNode();
     outputDiv.innerText = myNode1.getNameDef();
 }
 
