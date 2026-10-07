@@ -77,8 +77,46 @@ function sketch1() {
     let height = 300;
     let width = 300;
     // reminds me of the gdi lib from ibm
+
     ctx.strokeStyle = '#e11d48';
     ctx.lineWidth = 4;
+
+    // border box
     ctx.strokeRect(.5, .5, height, width);
+
+    const centerX = 95;
+    const centerY = 50;
+    const radius = 40;
+
+    // Circle
+    ctx.beginPath();
+    ctx.arc(centerX, centerY, radius, 0, 2 * Math.PI);
+    ctx.strokeStyle = '#000000';
+    ctx.lineWidth = 2;
+    ctx.stroke();
+
+    // Draw 9 Dots Around the Perimeter
+    const numDots = 16;
+    const dotRadius = 4;
+
+    for (let i = 0; i < numDots; i++) {
+
+
+        // got match from outside source
+        const angle = (i * 2 * Math.PI) / numDots - Math.PI / 2;
+        // distance
+        // Calculate (x, y) coordinates along the circle's outer edge
+        const dotX = centerX + radius * Math.cos(angle);
+        const dotY = centerY + radius * Math.sin(angle);
+
+        // Render each dot
+        ctx.beginPath();
+        ctx.arc(dotX, dotY, dotRadius, 0, 2 * Math.PI);
+        ctx.fillStyle = '#2563eb'; // Blue fill
+        ctx.fill();
+        ctx.strokeStyle = '#ffffff'; // White border ring
+        ctx.lineWidth = 1;
+        ctx.stroke();
+    }
 
 }
