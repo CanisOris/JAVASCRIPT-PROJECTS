@@ -10,6 +10,16 @@ Type Coercion = cast
 =========================
 snipps
 
+it took me a while to get these down to simple
+    const nameValid = fullname.value.trim() !== '';
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const emailValid = emailRegex.test(email.value.trim());
+
+    fullnameError.classList.toggle('hidden', nameValid);
+    emailError.classList.toggle('hidden', emailValid);
+
+
+
 form stop from refreshing page
 event.preventDefault();
 
