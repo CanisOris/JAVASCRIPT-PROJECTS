@@ -120,3 +120,18 @@ function sketch1() {
     }
 
 }
+
+function GetGradient(){
+
+    const canvas = document.getElementById("myCanvas2");
+    const ctx = canvas.getContext("2d");
+
+        // x, y start - x, y end
+        const gradient = ctx.createLinearGradient(0, 0, 300, 0);
+
+        gradient.addColorStop(0, "blue");
+        gradient.addColorStop(1, "green");
+
+        ctx.fillStyle = gradient;
+        ctx.fillRect(0, 0, 300, 300);
+}

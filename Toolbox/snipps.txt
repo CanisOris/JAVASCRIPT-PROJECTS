@@ -10,6 +10,13 @@ Type Coercion = cast
 =========================
 snipps
 
+form stop from refreshing page
+event.preventDefault();
+
+object loops search
+    document.querySelectorAll('.error-message').forEach(el => el.textContent = '');
+    document.querySelectorAll('input').forEach(el => el.classList.remove('input-error'));
+
 // CONSOLE iffy
 (() => {
     // Code runs immediately here
