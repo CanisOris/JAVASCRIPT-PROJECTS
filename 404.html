@@ -127,15 +127,7 @@
     </style>
     <!-- Note: script and css on page is better because it looses its relative paths  -->
     <!-- making copies of this and putting somewhere else also you would have to put full path in  -->
-    <script>
-        const returnLink = document.getElementById('return-link');
-
-        if (document.referrer) {
-            returnLink.href = document.referrer;
-        } else {
-            // returnLink.textContent = 'Return to Base';
-        }
-    </script>
+    
 </head>
 
 <body>
@@ -153,6 +145,16 @@
 
         <a id="returnLink" href="/JAVASCRIPT-PROJECTS/Basic%20JavaScript%20Projects/" class="btn-return">Return to Base</a>
     </div>
+
+    <script>
+        const returnLink = document.getElementById('return-link');
+
+        if (document.referrer) {
+            returnLink.href = document.referrer;
+        } else {
+            // returnLink.textContent = 'Return to Base';
+        }
+    </script>
 </body>
 
 </html>
