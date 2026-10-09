@@ -13,7 +13,7 @@
     <link rel="stylesheet" type="text/css" href="./style/color.css">
 
     <script src="./js1/main.js" defer></script>
-    <!-- <script src="./JavaScript/JavaScript_3.js" defer></script> -->
+
     <script src="/JAVASCRIPT-PROJECTS/Basic%20JavaScript%20Projects/js1/site.js" defer></script>
 
 </head>
@@ -24,7 +24,7 @@
     // .map(function(field) {
     //     return field.name;
     // })
-// **snip .join(', '); join list with commas
+// 
 
     function getFieldNames(form) {
         return Array.from(form.querySelectorAll('input, select, textarea'))
@@ -74,7 +74,7 @@
                 <div id="form-status"></div>
                 <!-- <button class="form-button-submit" type="submit">Submit<span aria-hidden="true"></span></button> -->
 
-                
+                <!--**snip(4) .join(', '); join list with commas-->
                 <button type="button"
                     onclick="document.getElementById('formOut').textContent = getFieldNames(document.getElementById('form-generic-edit')).join(', ');">
                     Regular function

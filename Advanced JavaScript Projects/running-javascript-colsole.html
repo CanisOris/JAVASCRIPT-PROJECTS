@@ -64,9 +64,9 @@
 
         function Course(Name, Type, Duration) {
             try {
-                // **Note: Try catch 
+                // **Note: Try catch
+                // **snip(4): Try catch Test Null and Empty Str
                 // undefined is converted to string then considered an answer / not throw
-                // **Snip: Try catch Test Null and Empty Str
                 if (!Name || !Type || !Duration) {
                     throw new Error("Missing parameters");
                 }
