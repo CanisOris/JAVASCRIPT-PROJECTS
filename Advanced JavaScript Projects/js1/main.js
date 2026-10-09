@@ -17,17 +17,22 @@ function isAlpha(str) {
 }
 
 function getInLi() {
-    // Get all list items
+    if (!target) return; // No target in the URL
+
     const listItems = document.querySelectorAll('li');
 
     for (const li of listItems) {
-        // Find the first span inside this specific li
         const span = li.querySelector('span');
 
-        if (span && span.value == isAlpha(str)) {
-            // set value
+        if (
+            span &&
+            span.textContent.trim().toLowerCase() ===
+                target.trim().toLowerCase()
+        ) {
             span.style.color = 'red';
             break;
         }
     }
 }
+
+getInLi();
