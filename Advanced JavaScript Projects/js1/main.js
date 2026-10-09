@@ -7,7 +7,7 @@ const urlParams = new URLSearchParams(queryString);
 const target = urlParams.get('target');
 
 function targetList(str){
-  isAlpha(str)
+  isAlpha(str);
 }
 
 
@@ -24,7 +24,7 @@ function getInLi() {
         // Find the first span inside this specific li
         const span = li.querySelector('span');
 
-        if (span) {
+        if (span && span.value == isAlpha(str)) {
             // set value
             span.style.color = 'red';
             break;
