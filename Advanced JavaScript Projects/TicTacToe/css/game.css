@@ -46,6 +46,7 @@ body {
  ################################################### */
 
 .center-container {
+    position: relative;
     width: 608px;
     margin: 0 auto;
     margin-top: 50px;    
@@ -62,15 +63,26 @@ td {
     width: 200px;
     height: 200px;
     filter: contrast(3);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 canvas {
     position: absolute;
+    top: 0;
+    left: 0;
     z-index: 10;
     pointer-events: none;
 }
 
 h1 {
     text-align: center;
+}
+
+
+#game-status {
+    text-align: center;
+    margin-top: 12px;
 }
 
