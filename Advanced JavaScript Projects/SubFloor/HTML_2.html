@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Contact Form Challenge</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" href="./style/main.css">
+    <link rel="stylesheet" type="text/css" href="./style/form.css">
+    <link rel="stylesheet" type="text/css" href="./style/color.css">
+
+    <script src="./js1/main.js" defer></script>
+    <script src="./JavaScript/JavaScript_2.js" defer></script>
+    <script src="/JAVASCRIPT-PROJECTS/Basic%20JavaScript%20Projects/js1/site.js" defer></script>
+
+</head>
+
+<body id="body_style">
+    <header>
+        <h1 id="page-title"></h1>
+    </header>
+
+    <div class="button-grid">
+        <div class="flex-box">
+            <form id="form-contact" class="Contact_Form"  novalidate>
+                <p class="Form_Intro">Have a project in mind? Let's connect.</p>
+                <div class="Form_Field">
+                    <label for="full-name">Your name</label>
+                    <input type="text" id="full-name" name="Name" autocomplete="name" placeholder="Full name" class="form-input-text" form-required>
+                    <span class="form-error-message hidden" id="full-name-error">Please tell me your name.</span>
+                </div>
+                <div class="Form_Field">
+                    <label for="Email">Email address</label>
+                    <input type="email" id="Email" name="Email" autocomplete="email" placeholder="you@example.com" class="form-input-text" form-required>
+                    <span class="form-error-message hidden" id="EmailError">Please enter a valid email.</span>
+                </div>
+                <div class="Form_Field">
+                    <label for="Message">Your message</label>
+                    <textarea id="Message" name="Message" rows="5" placeholder="Tell me a little about your project..." class="form-textarea" ></textarea>
+                </div>
+                <div id="form-status"></div>
+                <button class="Send_Button" type="submit">Send message <span aria-hidden="true">&#8599;</span></button>
+            </form>
+
+        </div>
+    </div>
+    <footer></footer>
+</body>
+
+</html>
