@@ -1,0 +1,76 @@
+
+/* ###################################################
+ COLORS
+ ################################################### */
+:root {
+
+
+    --body-bg: #12162A;
+    --col-card-bg: #3E2D1F;
+    --body-text: #F9F7EF;
+
+
+}
+
+
+/* ###################################################
+                    BASE SETUP
+ ################################################### */
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding-top: 0;
+    box-sizing: border-box;
+}
+
+html {
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Pangolin", cursive;
+    font-size: 24px;
+    margin: 0;
+    padding: 0;
+    background-color: var(--body-bg);
+    color: var(--body-text);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* ###################################################
+ ################################################### */
+
+.center-container {
+    width: 608px;
+    margin: 0 auto;
+    margin-top: 50px;    
+}
+
+table {
+    border-collapse: collapse;
+    border-style: hidden;
+}
+td {
+    cursor: pointer;
+    border: 4px solid blue;
+    padding: 0;
+    width: 200px;
+    height: 200px;
+    filter: contrast(3);
+}
+
+canvas {
+    position: absolute;
+    z-index: 10;
+    pointer-events: none;
+}
+
+h1 {
+    text-align: center;
+}
+
