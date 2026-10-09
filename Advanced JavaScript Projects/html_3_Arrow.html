@@ -24,7 +24,7 @@
     // .map(function(field) {
     //     return field.name;
     // })
-
+// **snip .join(', '); join list with commas
 
     function getFieldNames(form) {
         return Array.from(form.querySelectorAll('input, select, textarea'))
@@ -74,7 +74,7 @@
                 <div id="form-status"></div>
                 <!-- <button class="form-button-submit" type="submit">Submit<span aria-hidden="true"></span></button> -->
 
-                // **snip .join(', '); join list with commas
+                
                 <button type="button"
                     onclick="document.getElementById('formOut').textContent = getFieldNames(document.getElementById('form-generic-edit')).join(', ');">
                     Regular function
