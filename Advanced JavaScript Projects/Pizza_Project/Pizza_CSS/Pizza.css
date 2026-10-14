@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Isometra&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Edu+QLD+Hand:wght@400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+@import 'color.css';
+/* ###################################################
+                    BASE SETUP
+ ################################################### */
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding-top: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-fam-default);
+    font-size: 24px;
+
+    margin: 0;
+    padding: 0;
+    color: var(--body-text);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+
+
+background-color: var(--body-bg); 
+
+    background-image: linear-gradient(rgba(11, 16, 33, 0.8), rgba(11, 16, 33, 0.8)), url('../images/pizza_party.jpg');
+    background-size: cover; 
+    background-attachment: fixed; 
+    background-position: center; 
+    background-repeat: no-repeat;
+
+}
+
+/* ###################################################  */
+
+
+.h1 {
+    font-family: var(--font-fam-default);
+     /* "Isometra", 'Courier New', Courier, monospace; */
+    color: var(--text-main);
+}
+
+.h3 {
+    font-family: var(--font-fam-decore);
+    color: var(--text-main);
+}
+
+.div {
+    font-family: var(--font-fam-decore);
+    color: var(--text-main);
+}
+
+li {
+   list-style-type: none;
+}
+
+.menu-title {
+    margin:0 0px 0 20px;
+}
+
+#menuBG {
+    width: auto;
+    height: 470px;
+    margin: 10px auto;
+    padding-bottom:  20px;
+}
+
+#frmMenu {
+   width: 100%;
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: space-between;
+}
+
+
+.menu {
+    flex: 1; /* 1 space */
+    min-width: 200px; 
+    margin: 0 10px;
+}
+
+
+
+.ingreadiant:hover{
+    
+background-color: rgba(95, 158, 160, 0.404);
+
+}
+
+#totalPrice {
+    width: 200px;
+    height: 190px;
+    margin: 0 auto;
+    float: right;
+}
+.left, .right {
+    float: none;
+    width: auto;
+}
+
+#showText {
+    width: 200px;
+    height: 190px;
+    margin: 0px auto;
+    float: left;
+}
+
+#cart {
+    width: 100%; 
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border-color); 
+}
+
+#btnOrder {
+    margin: 10px 0px 0px 100px;
+    width: 100px;
+    height: 40px;
+}

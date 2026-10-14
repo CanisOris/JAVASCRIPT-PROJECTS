@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Pizza Drill Tutorial</title>
+    <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+
+    <link rel="stylesheet" type="text/css" href="./Pizza_CSS/pizza.css" />
+    <script src="./Pizza_JavaScript/pizza.js" defer></script>
+    <script src="./Pizza_JavaScript/site.js" defer></script>
+</head>
+
+<body>
+
+    <header>
+        <h1 id="page-title"></h1>
+    </header>
+    <div id="menuBG">
+        <h1 class="menu-title"></h1>
+        <input id="btnOrder" type="button" onclick="getReceipt()" value="Place Order">
+        <form id="frmMenu">
+            <div class="menu left">
+                <h3>Size:</h3>
+                <label class="ingreadiant">
+                    <input class="size" type="radio" name="Size" value="Personal Pizza">Personal Pizza<br>
+                </label>
+                <label class="ingreadiant">
+                    <input class="size" type="radio" name="Size" value="Small Pizza">Small Pizza<br>
+                </label>
+                <label class="ingreadiant">
+                    <input class="size" type="radio" name="Size" value="Medium Pizza">Medium Pizza<br>
+                </label>
+                <label class="ingreadiant">
+                    <input class="size" type="radio" name="Size" value="Large Pizza" checked>Large Pizza<br>
+                </label>
+                <label class="ingreadiant">
+                    <input class="size" type="radio" name="Size" value="Extra Large Pizza">Extra Large Pizza<br>
+                </label>
+            </div>
+            <div class="menu right">
+                <h3>Meats:</h3>
+                <label class="ingreadiant">
+                    <input class="toppings" type="checkbox" name="Topping" value="Steak">Steak<br>
+                </label>
+                <label class="ingreadiant">
+                    <input class="toppings" type="checkbox" name="Topping" value="Pepperoni">Pepperoni<br>
+                </label>
+                <label class="ingreadiant">
+                    <input class="toppings" type="checkbox" name="Topping" value="Sausage">Sausage<br>
+                </label>
+                <label class="ingreadiant">
+                    <input class="toppings" type="checkbox" name="Topping" value="Canadian Bacon">Canadian Bacon<br>
+                </label>
+                <label class="ingreadiant">
+                    <input class="toppings" type="checkbox" name="Topping" value="Ground Beef">Ground Beef<br>
+                </label>
+                <label class="ingreadiant">
+                    <input class="toppings" type="checkbox" name="Topping" value="Anchovy">Anchovy<br>
+                </label>
+                <label class="ingreadiant">
+                    <input class="toppings" type="checkbox" name="Topping" value="Chicken">Chicken<br>
+                </label>
+            </div>
+
+            <div class="menu right">
+                <h3>Vegitables:</h3>
+                <label class="ingreadiant">
+                    <input class="toppings" type="checkbox" name="Topping" value="Mushrooms">Mushrooms<br>
+                </label>
+                <label class="ingreadiant">
+                    <input class="toppings" type="checkbox" name="Topping" value="Onion">Onion<br>
+                </label>
+                <label class="ingreadiant">
+                    <input class="toppings" type="checkbox" name="Topping" value="Tomatoes">Tomatoes<br>
+                </label>
+                <label class="ingreadiant">
+                    <input class="toppings" type="checkbox" name="Topping" value="Olives">Olives<br>
+                </label>
+                <label class="ingreadiant">
+                    <input class="toppings" type="checkbox" name="Topping" value="Orion Pepper Bees">Orion Pepper
+                    Bees<br>
+                </label>
+
+            </div>
+            <div id="cart">
+                <div id="showText"></div>
+                <div id="totalPrice"></div>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>
