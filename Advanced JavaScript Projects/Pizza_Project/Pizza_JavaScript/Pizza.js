@@ -34,22 +34,27 @@ function getReceipt() {
 
 
 function getTopping(runningTotal, text1) {
+
     var toppingTotal = 0;
     var selectedTopping = [];
     var toppingArray = document.getElementsByClassName("toppings");
+    text1 += "<ul>";
     for (var j = 0; j < toppingArray.length; j++) {
         if (toppingArray[j].checked) {
             selectedTopping.push(toppingArray[j].value);
             console.log("selected topping item: (" + toppingArray[j].value + ")");
-            text1 = text1 + toppingArray[j].value + "<br>";
+            text1 = `<li> ${text1}  ${toppingArray[j].value} </li>`;
         }
     }
+    text1 += "</ul>";
+
     var toppingCount = selectedTopping.length;
     if (toppingCount > 1) {
         toppingTotal = (toppingCount - 1);
     } else {
         toppingTotal = 0;
     }
+
     runningTotal = (runningTotal + toppingTotal);
     console.log("total selected topping items: " + toppingCount);
     console.log(toppingCount + " topping - 1 free topping = " + "$" + toppingTotal + ".00");
