@@ -69,6 +69,7 @@ li {
     margin:0 0px 0 20px;
 }
 
+/* Flex box columns */
 #menuBG {
     width: auto;
     height: 470px;
@@ -84,6 +85,7 @@ li {
 }
 
 
+/* main flex box junction */
 .menu {
     flex: 1; /* 1 space */
     min-width: 200px; 
@@ -91,6 +93,7 @@ li {
 }
 
 
+/* show the bar row on hover, personal preference */
 
 .ingreadiant:hover{
     

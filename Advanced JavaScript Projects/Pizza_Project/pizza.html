@@ -19,12 +19,14 @@
     <header>
         <h1 id="page-title"></h1>
     </header>
+    <!-- Flex box to hold all the menu item columns -->
     <div id="menuBG">
         <h1 class="menu-title"></h1>
         <input id="btnOrder" type="button" onclick="getReceipt()" value="Place Order">
         <form id="frmMenu">
             <div class="menu left">
                 <h3>Size:</h3>
+                <!-- added labels so you can check/select the entire line per pref -->
                 <label class="ingreadiant">
                     <input class="size" type="radio" name="Size" value="Personal Pizza">Personal Pizza<br>
                 </label>
