@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>js stuff</title>
+    <title>Ajax</title>
     <meta charset="utf-8" />
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
     <meta http-equiv="Pragma" content="no-cache" />
@@ -18,7 +18,7 @@
     eliminating the round-trip latency when the actual font assets -->
 
     <link rel="stylesheet" type="text/css" href="./style/main.css">
-    <script src="./js1/main.js" defer></script>
+    <script src="./ajaxScript.js" defer></script>
     <script src="/JAVASCRIPT-PROJECTS/Basic%20JavaScript%20Projects/js1/site.js" defer></script>
 
 </head>
@@ -34,10 +34,19 @@
             <p id="Out"></p>
             <button onclick="">Smash</button>
         </div> -->
+        <div class="flex-box">
+        <div><quote id="quoteOut"></quote></div>
+        
+        <input onclick="getGetQuote();" type="button" class="btn" value="Get Quote"/>
+</div>
 
-    </div>
+        <div class="flex-box">
+            <div id="weather-display" class="weather-card">
+                <p style="color: whitesmoke;">Detecting location and fetching weather...</p>
+            </div>
+        </div>
 
-    <footer></footer>
+        <footer></footer>
 </body>
 
 </html>
