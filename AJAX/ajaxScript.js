@@ -37,106 +37,60 @@ function getGetQuote() {
     // 4. Fire the network call
     ajaxRequest.send();
 }
-function getMsg2() {
-    // get input value of name to display to user after
-    // request has been made
-    let inputVal = document.getElementById('fullName').value;
-
-    // ** step1 setup the xml http request object
-    //let ajaxRequest = new XMLHttpRequest();
-    // ########################### [ ajaxRequest  ]
-    let ajaxRequest = new XMLHttpRequest();
-
-    // **snip
-    // Call back event
-    // readyState values
-    // 0 = not initialized
-    // 1 = connection established
-    // 2 = recieved
-    // 3 = processing
-    // 4 = done = ready
-    // status = server status codes
-    // onload runs after the request is done, so no readyState check is needed here.
-
-    // ** step 3 defines the agjax response callback method that establishes
-    // whether the response was successeful and where the data shouls be displayed
-
-
-    ajaxRequest.onload = function () {
-        if (this.status === 200) {
-            // Insert the response before updating the message it contains.
-            document.getElementById('content').innerHTML = this.responseText;
-
-            // function to display user input value once request
-            // has been recieved
-            document.getElementById('tkuMsg').textContent =
-                "Thank you " + inputVal + " for signing up!";
-        } else {
-            console.error("Request failed:", this.status);
-        }
-    };
-    ajaxRequest.onerror = function () {
-        console.error("Unable to load the response. Open the page through a local web server.");
-    };
-
-    // ** step 2 prepare the type of reques and what to reqst from the server
-    // type, url, async
-    ajaxRequest.open('GET', 'response.html', true);
-
-    // ** step 4 send the trequest
-    ajaxRequest.send();
-}
-
+// Keep both lesson buttons available while sharing the same request logic.
 function getMsg() {
-    // get input value of name to display to user after
-    // request has been made
-    let inputVal = document.getElementById('fullName').value;
-
-    // ** step1 setup the xml http request object
-    //let ajaxRequest = new XMLHttpRequest();
-    // ########################### [ ajaxRequest  ]
-    let ajaxRequest = new XMLHttpRequest();
-
-    // **snip
-    // Call back event
-    // readyState values
-    // 0 = not initialized
-    // 1 = connection established
-    // 2 = recieved
-    // 3 = processing
-    // 4 = done = ready
-    // status = server status codes
-    // onload runs after the request is done, so no readyState check is needed here.
-
-    // ** step 3 defines the agjax response callback method that establishes
-    // whether the response was successeful and where the data shouls be displayed
-
-
-    ajaxRequest.onload = function () {
-        if (this.status === 200) {
-            // Insert the response before updating the message it contains.
-            document.getElementById('content').innerHTML = this.responseText;
-
-            // function to display user input value once request
-            // has been recieved
-            document.getElementById('tkuMsg').textContent =
-                "Thank you " + inputVal + " for signing up!";
-        } else {
-            console.error("Request failed:", this.status);
-        }
-    };
-    ajaxRequest.onerror = function () {
-        console.error("Unable to load the response. Open the page through a local web server.");
-    };
-
-    // ** step 2 prepare the type of reques and what to reqst from the server
-    // type, url, async
-    ajaxRequest.open('GET', 'response.html', true);
-
-    // ** step 4 send the trequest
-    ajaxRequest.send();
+    loadNewsletter();
 }
 
+function getMsg2() {
+    loadNewsletter();
+}
+
+function loadNewsletter() {
+    const inputVal = document.getElementById('fullName').value.trim();
+    const content = document.getElementById('content');
+    const status = document.getElementById('requestStatus');
+    const buttons = document.querySelectorAll('.display .btn');
+    const ajaxRequest = new XMLHttpRequest();
+
+    // Disable both buttons until this request finishes, preventing duplicate requests.
+    buttons.forEach(button => { button.disabled = true; });
+    status.textContent = 'Loading newsletter...';
+
+    function finishRequest(message) {
+        status.textContent = message;
+        buttons.forEach(button => { button.disabled = false; });
+    }
+
+    // A successful response replaces only the paragraph region, without a refresh.
+    ajaxRequest.onload = function () {
+        if (this.status >= 200 && this.status < 300) {
+            content.innerHTML = this.responseText;
+            const thankYou = content.querySelector('#tkuMsg');
+            if (thankYou) {
+                // textContent displays the name as text, never as executable HTML.
+                thankYou.textContent = inputVal
+                    ? 'Thank you ' + inputVal + ' for signing up!'
+                    : 'Thank you for signing up!';
+            }
+            finishRequest('');
+        } else {
+            finishRequest('Unable to load the newsletter (HTTP ' + this.status + '). Please try again.');
+        }
+    };
+
+    ajaxRequest.onerror = function () {
+        finishRequest('Unable to reach the server. Please try again.');
+    };
+    ajaxRequest.ontimeout = function () {
+        finishRequest('The request timed out. Please try again.');
+    };
+
+    // Request the fragment from the same server asynchronously.
+    ajaxRequest.open('GET', 'response.html', true);
+    ajaxRequest.timeout = 10000;
+    ajaxRequest.send();
+}
 
 // Construct the URL to get the current weather
 // https://api.open-meteo.com/v1/forecast?latitude=45.5946&longitude=121.1787&current_weather=true
