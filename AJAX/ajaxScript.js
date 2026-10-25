@@ -37,22 +37,24 @@ function getGetQuote() {
     // 4. Fire the network call
     ajaxRequest.send();
 }
-// Keep both lesson buttons available while sharing the same request logic.
+// btn1 displays the response exactly as downloaded.
 function getMsg() {
-    loadNewsletter();
+    loadNewsletter(false);
 }
 
+// btn2 downloaded thank-you.
 function getMsg2() {
-    loadNewsletter();
+    loadNewsletter(true);
 }
 
-function loadNewsletter() {
+function loadNewsletter(personalize) {
     const inputVal = document.getElementById('fullName').value.trim();
     const content = document.getElementById('content');
     const status = document.getElementById('requestStatus');
     const buttons = document.querySelectorAll('.display .btn');
     const ajaxRequest = new XMLHttpRequest();
 
+    // **snip(3) form button disable
     // Disable both buttons until this request finishes, preventing duplicate requests.
     buttons.forEach(button => { button.disabled = true; });
     status.textContent = 'Loading newsletter...';
@@ -62,12 +64,12 @@ function loadNewsletter() {
         buttons.forEach(button => { button.disabled = false; });
     }
 
-    // A successful response replaces only the paragraph region, without a refresh.
+    // test fpr errros and if success update without page refresh
     ajaxRequest.onload = function () {
         if (this.status >= 200 && this.status < 300) {
             content.innerHTML = this.responseText;
             const thankYou = content.querySelector('#tkuMsg');
-            if (thankYou) {
+            if (personalize && thankYou) {
                 // textContent displays the name as text, never as executable HTML.
                 thankYou.textContent = inputVal
                     ? 'Thank you ' + inputVal + ' for signing up!'
@@ -86,8 +88,8 @@ function loadNewsletter() {
         finishRequest('The request timed out. Please try again.');
     };
 
-    // Request the fragment from the same server asynchronously.
-    ajaxRequest.open('GET', 'response.html', true);
+    // unique query string to prevent cache 
+    ajaxRequest.open('GET', 'response.html?_=' + Date.now(), true);
     ajaxRequest.timeout = 10000;
     ajaxRequest.send();
 }

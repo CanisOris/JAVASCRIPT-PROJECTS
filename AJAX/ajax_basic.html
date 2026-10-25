@@ -13,25 +13,23 @@
 <body>
 	<div class="container">
 		<h1>Sign up for our Newsletter</h1>
-		<!-- These buttons use type="button" so the form does not submit or refresh the page.
-		     Both call the AJAX examples in ajaxScript.js, which request response.html. -->
+		<!-- type="button"  does not submit or refresh the page. -->
 		<div class="display">
 			<form>
 				<input id="fullName" placeholder="Name">
 				<input placeholder="Email">
-				<input onclick="getMsg();" type="button" class="btn" value="Submit Msg1"/>
-				<input onclick="getMsg2();" type="button" class="btn" value="Submit Msg2"/>
+				<input onclick="getMsg();" type="button" class="btn" value="Load Newsletter"/>
+				<input onclick="getMsg2();" type="button" class="btn" value="Sign Up"/>
 			</form>
 		</div>
-		<!-- AJAX replaces this initial paragraph with the downloaded HTML fragment.
-		     Keeping the form outside this region lets you try either button again. -->
+		<!-- ajax replace section -->
 		<div id="content" aria-live="polite">
-			<p>Click a Submit button to load our newsletter message.</p>
+			<p>Load the newsletter, or enter your name and click Sign Up for a personalized message.</p>
 		</div>
-		<!-- Request failures are shown separately so the original content remains available. -->
+		<!-- request failures msg -->
 		<p id="requestStatus" role="status"></p>
 	</div>
-	<!-- Load the script after the HTML so the form and output elements already exist. -->
-	<script src="./ajaxScript.js"></script>
+	<!-- load late after form  -->
+	<script src="./ajaxScript.js?v=3"></script>
 </body>
 </html>
