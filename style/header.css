@@ -1,0 +1,24 @@
+.site-nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 1rem;
+    background: #1c2340;
+    border-bottom: 2px solid #d8ac58;
+    font-family: Arial, sans-serif;
+    font-size: 1rem;
+}
+
+.site-nav a {
+    padding: 0.65rem 1rem;
+    border-radius: 5px;
+    color: #f9f7ef;
+    text-decoration: none;
+}
+
+.site-nav a:hover,
+.site-nav a:focus-visible {
+    background: #35436d;
+    text-decoration: underline;
+}
