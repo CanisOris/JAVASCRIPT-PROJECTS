@@ -8,6 +8,9 @@
     border-bottom: 2px solid #d8ac58;
     font-family: Arial, sans-serif;
     font-size: 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
 .site-nav a {
