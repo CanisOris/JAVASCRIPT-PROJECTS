@@ -8,6 +8,8 @@
     <meta http-equiv="Pragma" content="no-cache" />
     <meta http-equiv="Expires" content="0" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+<script src="https://code.jquery.com/jquery-3.6.3.min.js"
+    integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
 
     <!-- serves the CSS stylesheet defining the font rules -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,6 +18,13 @@
     <link rel="stylesheet" type="text/css" href="/JAVASCRIPT-PROJECTS/style/main.css">
     <script src="/JAVASCRIPT-PROJECTS/js1/main.js" defer></script>
     <script src="/JAVASCRIPT-PROJECTS/Basic%20JavaScript%20Projects/js1/site.js" defer></script>
+
+<script>
+
+    document.addEventListener('DOMContentLoaded', () => {
+    
+});
+</script>
 
 </head>
 
@@ -26,14 +35,59 @@
 
     <div class="button-grid">
         <div class="flex-box">
-            <h4 class="box-title">Loops Assignment</h4>
-            <p id="Out"></p>
-            <button onclick="">Smash</button>
+             <h4 class="box-title">jQuery Event Basics</h4>
+
+
+            See events in console
+            <p style="font-size: xx-large;">Hover your mouse over me, then click me!</p>
+            
+        </div>
+
+        <div class="flex-box">
+             <h4 class="box-title">jQuery Introduction to Effects</h4>
+<p>Click on this text to hide ...</p>
+<button class="reset-btn" id="showBtn">Bring Text Back</button>
+            See events in console
+            <p style="font-size: xx-large;">Hover your mouse over me, then click me!</p>
+            
         </div>
 
     </div>
 
     <footer></footer>
+
+    <script>
+        // Wait for the HTML to fully load before attaching events
+        $(document).ready(function() {
+            
+            // I can see where this would be useful
+            // run more than 1 function !!!
+            $( "p" ).on({
+                "click": function() { 
+                    console.log( "clicked!" ); 
+                },
+                "mouseover": function() { 
+                    console.log( "hovered!" ); 
+                }
+            });
+
+
+            // The ... solution, i would change the close if i had more time
+            // When the paragraph is clicked, hide it slowly
+            $( "p" ).on( "click", function() {
+                // this - current target
+                $( this ).hide( "slow" );
+            });
+
+            // Reset button
+            $( "#showBtn" ).on( "click", function() {
+                $( "p" ).show( "slow" );
+            });
+
+
+
+        });
+    </script>
 </body>
 
 </html>
