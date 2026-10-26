@@ -1,3 +1,4 @@
+// **snip(2) default document ready function
 $(document).ready(function () {
     // **snip(16) default document ready function
     // chaining technique
