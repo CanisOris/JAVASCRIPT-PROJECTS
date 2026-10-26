@@ -1,0 +1,203 @@
+
+
+/* ========[Variables]============================================================= */
+:root {
+    --text-muted: #b8c4d8;
+    --border-input: #41506b;
+    --bg-input: #101a2d;
+    --text-placeholder: #9baac0;
+    --border-input-hover: #71809c;
+    --shadow-focus: rgba(223, 159, 67, 0.12);
+    --accent-gold-hover: #efb55d;
+    --shadow-button-hover: rgba(223, 159, 67, 0.18);
+}
+
+/* ========[General Form Layout & Containers]====================================== */
+form {
+    padding: 0;
+    border-radius: 5px;
+    background-color: var(--bg-panel-dark);
+    padding: 10px;
+    /* font-family: "Trebuchet MS", Optima; */
+    font-family: "Reddit Sans Condensed", sans-serif;
+}
+
+/* useful flip value */
+.hidden {
+  display: none;
+}
+
+#About .Column_2,
+#Contact .Column_2 {
+    position: relative;
+    padding: 0;
+    overflow: hidden;
+}
+
+#Contact .Column_1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: clamp(24px, 4vw, 56px);
+}
+
+#Contact .Column_1>h1 {
+    text-align: left;
+    margin-bottom: 12px;
+    width: 100%;
+    max-width: 560px;
+    align-self: center;
+}
+
+.Contact_Form {
+    display: grid;
+    gap: 22px;
+    width: 100%;
+    max-width: 560px;
+    align-self: center;
+    background: transparent;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.Contact_Form .Form_Intro {
+    padding: 0;
+    font: inherit;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    letter-spacing: 0;
+    color: var(--text-muted);
+    text-align: left;
+}
+
+.Contact_Form label {
+    font-size: 1.1em;
+    font-weight: 600;
+    color: var(--text-main);
+    padding-left: 2px;
+}
+
+.Form_Field {
+    display: grid;
+    gap: 8px;
+    min-width: 0;
+}
+
+/* ========[Inputs & Textareas (Base)]============================================= */
+.form-input-text,
+.form-textarea {
+    display: block;
+    width: 100%;
+    min-width: 0;
+    padding: 12px;
+    margin: 2px 0 0;
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    background: var(--bg-deep-navy);
+    color: var(--text-bright);
+    line-height: 1.1;
+    font-family: "Reddit Sans Condensed", sans-serif;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: none;
+}
+
+.form-input-text:hover {
+    box-shadow: 0 0 5px var(--accent-glow) inset;
+}
+
+.form-input-text::placeholder,
+.form-textarea::placeholder {
+    color: var(--text-placeholder);
+    opacity: 1;
+}
+
+.form-input-text:hover,
+.form-textarea:hover {
+    border-color: var(--border-input-hover);
+    box-shadow: none;
+}
+
+.form-input-text:focus,
+.form-textarea:focus {
+    outline: 2px solid var(--accent-gold);
+    outline-offset: 2px;
+    border-color: var(--accent-gold);
+    box-shadow: 0 0 0 5px var(--shadow-focus);
+}
+
+.form-textarea {
+    min-height: 150px;
+}
+.form-textarea {
+    resize: vertical;
+    field-sizing: content;
+}
+
+.form-input-text {
+    box-sizing: border-box;
+}
+
+
+/* ========[Contact Form Specific Fields]========================================== */
+
+
+
+
+/* ========[Buttons]=============================================================== */
+.form-input-submit {
+    background-color: var(--bg-deep-navy);
+    color: var(--accent-gold);
+    font-family: Perpetua, Rockwell Extra Bold;
+    font-weight: bold;
+    padding: 12px 20px;
+    border: 1px solid var(--accent-gold);
+    border-radius: 4px;
+    cursor: pointer;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+
+.form-input-submit:hover {
+    background-color: var(--accent-gold);
+    color: var(--bg-deep-navy);
+    transform: scale(1.5);
+    transition: transform 1.5s;
+}
+
+.Send_Button {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    width: 100%;
+    min-height: 52px;
+    padding: 14px 18px;
+    border: 1px solid var(--accent-gold);
+    border-radius: 12px;
+    background: var(--accent-gold);
+    color: var(--bg-deep-navy);
+    font: inherit;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.Send_Button span {
+    font-size: 1.4rem;
+    line-height: 1;
+}
+
+.Send_Button:hover {
+    background: var(--accent-gold-hover);
+    box-shadow: 0 6px 20px var(--shadow-button-hover);
+}
+
+.Send_Button:focus-visible {
+    outline: 2px solid var(--text-bright);
+    outline-offset: 4px;
+}
+
+.form-error-message{
+    color: red;
+}

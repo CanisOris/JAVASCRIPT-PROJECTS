@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>JQ Challenge</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- serves the CSS stylesheet defining the font rules -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+
+    <link rel="stylesheet" type="text/css" href="/JAVASCRIPT-PROJECTS/style/main.css">
+    <link rel="stylesheet" type="text/css" href="/JAVASCRIPT-PROJECTS/style/form.css">
+    <script src="/JAVASCRIPT-PROJECTS/js1/main.js" defer></script>
+    <script src="/JAVASCRIPT-PROJECTS/Basic%20JavaScript%20Projects/js1/site.js" defer></script>
+
+
+    <script>
+
+        // Save data: localStorage.setItem('keyName', 'yourData');
+        // Retrieve data: localStorage.getItem('keyName');
+        // Delete data: localStorage.removeItem('keyName');
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const input = document.getElementById('userInput');
+            const display = document.getElementById('displayArea');
+
+            // 1. Retrieve and display data when the page loads
+            const savedData = localStorage.getItem('mySavedInfo');
+            if (savedData !== null) {
+                display.textContent = `Retrieved: ${savedData}`;
+            }
+
+            // 2. Save new data when the button is clicked
+            document.getElementById('saveBtn').addEventListener('click', () => {
+                const valueToSave = input.value;
+                localStorage.setItem('mySavedInfo', valueToSave);
+                display.textContent = `Saved: ${valueToSave}`;
+            });
+        });
+
+
+        // // Saving an object
+        // const userProfile = { theme: "dark", level: 5 };
+        // localStorage.setItem('profile', JSON.stringify(userProfile));
+
+        // // Retrieving an object
+        // const storedProfile = JSON.parse(localStorage.getItem('profile'));
+    </script>
+
+</head>
+
+<body id="body_style">
+    <header>
+        <h1 id="page-title"></h1>
+    </header>
+
+    <div class="button-grid">
+        <div class="flex-box">
+            <h4 class="box-title">Storage Experiment</h4>
+            <input class="form-input-text" type="text" id="userInput" placeholder="Enter information...">
+            <button id="saveBtn">Save Data</button>
+            <p id="displayArea"></p>
+        </div>
+
+    </div>
+
+    <footer></footer>
+</body>
+
+</html>
