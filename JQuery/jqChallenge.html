@@ -19,12 +19,13 @@
     <script src="/JAVASCRIPT-PROJECTS/js1/main.js" defer></script>
     <script src="/JAVASCRIPT-PROJECTS/Basic%20JavaScript%20Projects/js1/site.js" defer></script>
 
-<script>
-
-    document.addEventListener('DOMContentLoaded', () => {
-    
-});
-</script>
+    <style>
+        #event-demo,
+        #dotdotdot,
+        #blawblaw {
+            cursor: pointer;
+        }
+    </style>
 
 </head>
 
@@ -39,17 +40,14 @@
 
 
             See events in console
-            <p style="font-size: xx-large;">Hover your mouse over me, then click me!</p>
+            <p id="event-demo" style="font-size: xx-large;">Hover your mouse over me, then click me!</p>
             
         </div>
 
         <div class="flex-box">
              <h4 class="box-title">jQuery Introduction to Effects</h4>
-<p>Click on this text to hide ...</p>
-<button class="reset-btn" id="showBtn">Bring Text Back</button>
-            See events in console
-            <p style="font-size: xx-large;">Hover your mouse over me, then click me!</p>
-            
+            <div id="dotdotdot">This conversation will not fit in this ...</div>
+            <div id="blawblaw" style="display: none;"></div>
         </div>
 
     </div>
@@ -57,12 +55,15 @@
     <footer></footer>
 
     <script>
+var filler = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.";
+
+
         // Wait for the HTML to fully load before attaching events
         $(document).ready(function() {
             
             // I can see where this would be useful
             // run more than 1 function !!!
-            $( "p" ).on({
+            $( "#event-demo" ).on({
                 "click": function() { 
                     console.log( "clicked!" ); 
                 },
@@ -72,16 +73,18 @@
             });
 
 
-            // The ... solution, i would change the close if i had more time
-            // When the paragraph is clicked, hide it slowly
-            $( "p" ).on( "click", function() {
+            // Add the text before showing the initially hidden content.
+            $( "#blawblaw" ).text(filler);
+
+            // Click the expanded text to hide it slowly.
+            $( "#blawblaw" ).on( "click", function() {
                 // this - current target
-                $( this ).hide( "slow" );
+                $( this ).stop(true, true).hide( "slow" );
             });
 
-            // Reset button
-            $( "#showBtn" ).on( "click", function() {
-                $( "p" ).show( "slow" );
+            // Click the preview to show the full text.
+            $( "#dotdotdot" ).on( "click", function() {
+                $( "#blawblaw" ).stop(true, true).show( "slow" );
             });
 
 
