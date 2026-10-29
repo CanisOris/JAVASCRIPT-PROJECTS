@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>React 2</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- serves the CSS stylesheet defining the font rules -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="stylesheet" type="text/css" href="/JAVASCRIPT-PROJECTS/style/main.css">
+
+    <script defer src="/JAVASCRIPT-PROJECTS/js1/main.js" ></script>
+    <script defer src="/JAVASCRIPT-PROJECTS/js1/site.js"></script>
+
+    <script crossorigin src="https://unpkg.com/react@18.3.1/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js"></script>
+
+
+
+
+</head>
+
+<body id="body_style">
+    <header>
+        <h1 id="page-title"></h1>
+    </header>
+
+    <div class="button-grid">
+        <div class="flex-box">
+            <h4 class="box-title">React 2</h4>
+            <div id="like_button_container"></div>
+        </div>
+
+    </div>
+
+    <footer></footer>
+
+
+    <script>
+
+        const X = React.createElement;
+
+        class LikeButton extends React.Component {
+            // Create Object.
+            // props = properties
+            constructor(props) {
+                // Call the Constructor (base?)
+                super(props);
+                // 
+                this.state = { liked: false };
+            }
+            render() {
+                if (this.state.liked) {
+                    return 'You clicked the Like button!';
+                }
+                return X(
+                    'button',
+                    // setState = schedule UI Update
+                    { onClick: () => this.setState({ liked: true }) },
+                    'Like'
+                );
+            }
+        }
+
+
+
+        const domContainer = document.querySelector('#like_button_container');
+        const root = ReactDOM.createRoot(domContainer);
+        root.render(X(LikeButton));
+
+
+
+    </script>
+</body>
+
+</html>

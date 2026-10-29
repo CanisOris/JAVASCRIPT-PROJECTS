@@ -15,6 +15,7 @@ if (header) {
             </a>
             <a href="/JAVASCRIPT-PROJECTS/AJAX/">AJAX</a>
             <a href="/JAVASCRIPT-PROJECTS/JQuery/">jQuery</a>
+            <a href="/JAVASCRIPT-PROJECTS/React_Projects/">React</a>
         </nav>
     `);
 }
