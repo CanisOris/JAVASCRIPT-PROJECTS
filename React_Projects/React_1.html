@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>React 1</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- serves the CSS stylesheet defining the font rules -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+
+    <link rel="stylesheet" type="text/css" href="/JAVASCRIPT-PROJECTS/style/main.css">
+    <script src="/JAVASCRIPT-PROJECTS/js1/main.js" defer></script>
+    <script src="/JAVASCRIPT-PROJECTS/js1/site.js" defer></script>
+
+    <script src="./js1/react.js" defer></script>
+    <script src="./js1/react-dom.js" defer></script>
+
+    <!-- <script src="https://dcmks/cdnjs.cloudflare.com/ajax/libs/react/0.14.3/react.js" defer></script> -->
+    <!-- <script src="https://dcmks/cdnjs.cloudflare.com/ajax/libs/react/0.14.3/react-dom.js" defer></script> -->
+    <script src="./js1/react-dom.js" defer></script>
+
+
+    <script>
+        // Create a Class Counter
+        // It has a functions that outs time since start (render ?default out)
+        // calculation in seconds
+        var Counter = React.createClass({
+            render: function () {
+                var time_Passed = Math.round(this.props.time_Passed / 100);
+                var seconds_Passed = time_Passed / 10 + (time_Passed % 10 ? '' : '.0');
+                var text = 'My React code started running ' +
+                    seconds_Passed + ' seconds ago!';
+                return React.DOM.p(null, text);
+            }
+        });
+
+        // Create the Factory - This can create other objects
+        var counter_Factory = React.createFactory(Counter);
+
+        // React DOM Render - 
+        var start_Counting = new Date().getTime();
+        setInterval(function () {
+            ReactDOM.render(
+                counter_Factory({ time_Passed: new Date().getTime() - start_Counting }),
+                document.getElementById('My_React_Code')
+            );
+        }, 50);
+    </script>
+
+</head>
+
+<body id="body_style">
+    <header>
+        <h1 id="page-title"></h1>
+    </header>
+
+    <div class="button-grid">
+        <div class="flex-box">
+            <h4 class="box-title">React 1</h4>
+            <div id="My_React_Code"></div>
+        </div>
+
+    </div>
+
+    <footer></footer>
+</body>
+
+</html>
