@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>React 3</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- serves the CSS stylesheet defining the font rules -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="stylesheet" type="text/css" href="/JAVASCRIPT-PROJECTS/style/main.css">
+
+    <script defer src="/JAVASCRIPT-PROJECTS/js1/main.js"></script>
+    <script defer src="/JAVASCRIPT-PROJECTS/js1/site.js"></script>
+
+    <script crossorigin src="https://unpkg.com/react@18.3.1/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+
+
+
+</head>
+
+<body id="body_style">
+    <header>
+        <h1 id="page-title"></h1>
+    </header>
+
+    <div class="button-grid">
+        <div class="flex-box">
+            <h4 class="box-title">React 3</h4>
+            <div id="JSX"></div>
+        </div>
+
+    </div>
+
+    <footer></footer>
+
+
+    <!-- 
+installHook.js:1 Warning: ReactDOM.render is no longer supported in React 18. 
+Use createRoot instead. Until you switch to the new API, your app will behave 
+as if it's running React 17. Learn more: https://reactjs.org/link/switch-to-createroot 
+-->
+
+
+
+    <script type="text/babel">
+        class Greeting extends React.Component {
+            constructor(props) {
+                // init base props
+                super(props);
+                this.state = {
+                    clickCount: 0,
+                    status: "active"
+                };
+            }
+            render() {
+                // return <h1>Hello, World!</h1>
+                return (
+                    <div>
+                        <h1>Hello, {this.props.name}!</h1>
+
+                        <div style={{ marginTop: '20px', padding: '10px'}}>
+                            <h3>Debug Information</h3>
+
+                            <strong>Props:</strong>
+                            <pre>{JSON.stringify(this.props, null, 2)}</pre>
+
+                            <strong>State:</strong>
+                            // formatting trick increase indentation to 2 spaces
+                            <pre>{JSON.stringify(this.state, null, 2)}</pre>
+                        </div>
+                    </div>
+                );
+            }
+        }
+
+        // no longer supported
+        // ReactDOM.render(<Greeting />, document.getElementById('JSX'))
+
+        const container = document.getElementById('JSX');
+        const root = ReactDOM.createRoot(container);
+        // root.render(<Greeting />);
+        // added property
+        root.render(<Greeting name="Matthew" />);
+
+    </script>
+</body>
+
+</html>
