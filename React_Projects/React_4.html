@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>React 4</title>
+    <title>React 4 & more</title>
     <meta charset="utf-8" />
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
     <meta http-equiv="Pragma" content="no-cache" />
@@ -13,8 +13,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
 
     <link rel="stylesheet" type="text/css" href="/JAVASCRIPT-PROJECTS/style/main.css">
+    <link rel="stylesheet" type="text/css" href="./style/form.css">
 
     <script defer src="/JAVASCRIPT-PROJECTS/js1/main.js"></script>
+    <script defer src="./js1/main.js"></script>
     <script defer src="/JAVASCRIPT-PROJECTS/js1/site.js"></script>
 
     <script crossorigin src="https://unpkg.com/react@18.3.1/umd/react.development.js"></script>
@@ -22,6 +24,25 @@
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 
 
+    <style>
+        .fade-in-text {
+            animation: fade-in 3s ease-in both;
+        }
+
+        @keyframes fade-in {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        #msgErr {
+            display: none;
+        }
+    </style>
 
 
 </head>
@@ -31,19 +52,19 @@
         <h1 id="page-title"></h1>
     </header>
 
-    <div class="button-grid">
-        
+    <div class="button-grid" style="width: 100vw;">
+
         <div class="flex-box">
             <h4 class="box-title">React 3</h4>
             <div id="JSX"></div>
         </div>
 
-        
+
         <div class="flex-box">
-            <h4 class="box-title">React 4</h4>
+            <h4 class="box-title">React 4/ Fade Challenge</h4>
             <div>
-             <!-- **snip(2) Neat trick, pulls the leading lines out of the pre -->
-                <pre style="white-space: pre-line;">
+                <!-- **snip(2) Neat trick, pulls the leading lines out of the pre -->
+                <pre class="fade-in-text" style="white-space: pre-line;">
                     npm start
                     Starts the development server.
 
@@ -62,8 +83,26 @@
                     cd my-app
                     npm start
                 </pre>
+
+
             </div>
         </div>
+
+        <div class="flex-box">
+            <h4 class="box-title">Form Challenge</h4>
+            <form onsubmit="checkPhone(event)">
+
+                <div class="Form_Field">
+                    <label for="phone">Text Notification Phone</label>
+                    <input type="tel" id="phone" name="phone" autocomplete="none" placeholder="503-206-6915"
+                        pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" class="form-input-text" />
+                    <div id="msgErr" style="color: yellow;">Can't text you without your phone number.</div>
+                    <button class="Send_Button" type="submit" >Notify Me of Change!<span
+                            aria-hidden="true"></span></button>
+                </div>
+            </form>
+        </div>
+
 
     </div>
 
@@ -72,7 +111,8 @@
 
 
 
-
+    <!-- //  formatting trick increase indentation to 2 spaces -->
+    <!-- <pre>{JSON.stringify(this.state, null, 2)}</pre> -->
 
     <script type="text/babel">
         class Greeting extends React.Component {
@@ -97,7 +137,7 @@
                             <pre>{JSON.stringify(this.props, null, 2)}</pre>
 
                             <strong>State:</strong>
-                            // formatting trick increase indentation to 2 spaces
+
                             <pre>{JSON.stringify(this.state, null, 2)}</pre>
                         </div>
                     </div>
