@@ -39,6 +39,28 @@
             }
         }
 
+
+        .product1 {
+            position: relative;
+            color: red;
+            animation: AlertAni .5s forwards;
+        }
+
+        @keyframes AlertAni {
+            0% {
+                top: 0px;
+                background: red;
+                width: 100%;
+            }
+
+            100% {
+                top: -38px;
+                background: yellow;
+                width: 100%;
+            }
+        }
+
+
         #msgErr {
             display: none;
         }
@@ -97,10 +119,15 @@
                     <input type="tel" id="phone" name="phone" autocomplete="none" placeholder="503-206-6915"
                         pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" class="form-input-text" />
                     <div id="msgErr" style="color: yellow;">Can't text you without your phone number.</div>
-                    <button class="Send_Button" type="submit" >Notify Me of Change!<span
+                    <button class="Send_Button" type="submit">Notify Me of Change!<span
                             aria-hidden="true"></span></button>
                 </div>
             </form>
+        </div>
+
+        <div class="flex-box">
+            <h4 class="box-title">Keyframe Challenge</h4>
+            <div class="product1">Not Available</div>
         </div>
 
 
