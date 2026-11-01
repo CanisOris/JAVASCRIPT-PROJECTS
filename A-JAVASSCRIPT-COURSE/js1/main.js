@@ -4,6 +4,7 @@ function checkPhone(event) {
     const phone = document.getElementById('phone').value.trim();
     const error = document.getElementById('msgErr');
 
+        // change element property to flip visibility
     error.style.display = phone === '' ? 'flex' : 'none';
 
     if (phone === '') {
@@ -11,6 +12,17 @@ function checkPhone(event) {
     }
 }
 
+
+
+// could change this to a more generic function so it could be re-used
+// form display modal 
+function openForm() {
+  document.getElementById("form-popup").style.display = "block";
+}
+
+function closeForm() {
+  document.getElementById("form-popup").style.display = "none";
+}
 
 
 

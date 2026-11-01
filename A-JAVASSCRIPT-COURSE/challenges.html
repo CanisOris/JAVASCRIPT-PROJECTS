@@ -14,61 +14,18 @@
 
     <link rel="stylesheet" type="text/css" href="/JAVASCRIPT-PROJECTS/style/main.css">
     <link rel="stylesheet" type="text/css" href="./style/form.css">
+    <link rel="stylesheet" type="text/css" href="./style/effects.css">
 
     <script defer src="/JAVASCRIPT-PROJECTS/js1/main.js"></script>
-    <script defer src="./js1/main.js"></script>
     <script defer src="/JAVASCRIPT-PROJECTS/js1/site.js"></script>
+
+    <script defer src="./js1/main.js"></script>
+    <script defer src="./js1/fillerText.js"></script>
+    <script defer src="./js1/effects.js"></script>
 
     <script crossorigin src="https://unpkg.com/react@18.3.1/umd/react.development.js"></script>
     <script crossorigin src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js"></script>
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
-
-
-    <style>
-        p {
-            font-size: 1.2vw;
-        }
-
-        .fade-in-text {
-            animation: fade-in 3s ease-in both;
-        }
-
-        @keyframes fade-in {
-            from {
-                opacity: 0;
-            }
-
-            to {
-                opacity: 1;
-            }
-        }
-
-
-        .product1 {
-            position: relative;
-            color: red;
-            animation: AlertAni .5s forwards;
-        }
-
-        @keyframes AlertAni {
-            0% {
-                top: 0px;
-                background: red;
-                width: 100%;
-            }
-
-            100% {
-                top: -38px;
-                background: yellow;
-                width: 100%;
-            }
-        }
-
-
-        #msgErr {
-            display: none;
-        }
-    </style>
 
 
 </head>
@@ -129,11 +86,75 @@
         </div>
 
         <div class="flex-box">
+            <h4 class="box-title">Pop Contact Form (4)</h4>
+            <button class="open-button" onclick="openForm()">Join</button>
+
+            <div id="form-popup" class="form-popup">
+                <div style="float: right;">
+                    <button class="close-button" onclick="closeForm()">X</button>
+                </div>
+                <form class="Contact_Form" action="" method="POST">
+                    <p class="Form_Intro"></p>
+                    <div class="Form_Field">
+                        <label for="Name">Your name</label>
+                        <input type="text" id="Name" name="Name" autocomplete="name" placeholder="Full name"
+                            class="form-input-text" required>
+                    </div>
+                    <div class="Form_Field">
+                        <label for="Email">Email address</label>
+                        <input type="email" id="Email" name="Email" autocomplete="email" placeholder="you@example.com"
+                            class="form-input-text" required>
+                    </div>
+                    <div class="Form_Field">
+                        <label for="Message">Your message</label>
+                        <textarea id="Message" name="Message" rows="5"
+                            placeholder="Tell me a little about your project..." class="form-textarea"
+                            required></textarea>
+                    </div>
+                    <button class="Send_Button" type="submit">Send Contact</button>
+                </form>
+            </div>
+        </div>
+
+
+        <div class="flex-box">
             <h4 class="box-title">Keyframe </h4>
             <div class="product1">Not Available</div>
             Animation (5)
         </div>
 
+
+        <div class="flex-box">
+            <h4 class="box-title">Zoom (6)</h4>
+            <div class="zoom-img"><img src="./images/europa.png" alt="europa img"></div>
+
+        </div>
+
+        <div class="flex-box bookmark-panel">
+            <h4 class="box-title">Bookmark (7)</h4>
+            <a href="#t1">t1</a>
+            <a href="#t2">t2</a>
+            <div id="textBody"></div>
+
+        </div>
+
+
+         <div class="flex-box bookmark-panel">
+            <h4 class="box-title">Slideshow (8)</h4>
+      
+            <div id="slideshow">
+  <div>
+    <img src="//farm6.static.flickr.com/5224/5658667829_2bb7d42a9c_m.jpg">
+  </div>
+  <div>
+    <img src="//farm6.static.flickr.com/5230/5638093881_a791e4f819_m.jpg">
+  </div>
+  <div>
+    Pretty cool eh? This slide is proof the content can be anything.
+  </div>
+</div>
+
+        </div>
 
     </div>
 
@@ -143,7 +164,11 @@
 
 
 
-
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            fillerText('textBody');
+        });
+    </script>
 </body>
 
 </html>

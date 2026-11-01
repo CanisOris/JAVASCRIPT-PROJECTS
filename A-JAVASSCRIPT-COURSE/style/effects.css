@@ -1,0 +1,95 @@
+
+
+p {
+            font-size: 1.2vw;
+        }
+
+        .fade-in-text {
+            animation: fade-in 3s ease-in both;
+        }
+
+        @keyframes fade-in {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+
+        .product1 {
+            position: relative;
+            color: red;
+            animation: AlertAni .5s forwards;
+        }
+
+        @keyframes AlertAni {
+            0% {
+                top: 0px;
+                background: red;
+                width: 100%;
+            }
+
+            100% {
+                top: -38px;
+                background: yellow;
+                width: 100%;
+            }
+        }
+
+
+        #msgErr {
+            display: none;
+        }
+
+.highlight {
+    background-color: chocolate;
+}
+
+
+/* ZOOM  */
+/* "Ken Burns" effect */
+
+/* Start, Middle, End */
+
+@keyframes zoominoutsinglefeatured {
+    0% {
+        transform: scale(.2,.2);
+    }
+    50% {
+        transform: scale(1.2,1.2);
+    }
+    100% {
+        transform: scale(.1,.1);
+    }
+}
+
+.zoom-img {
+    overflow: hidden; /* Keeps the enlarged image inside the panel */
+}
+
+.zoom-img img {
+    display: block;
+    width: 100%;
+    height: auto;
+    animation: zoominoutsinglefeatured 15s forwards;
+}
+
+
+/* Preserve the line breaks between speakers in the Bookmark passage. */
+#textBody {
+    white-space: pre-line;
+    height: 400px;
+    overflow-y: auto;
+    scroll-behavior: smooth;
+}
+
+@media (min-width: 564px) {
+    .bookmark-panel {
+        grid-column: span 2;
+    }
+}
+
+/* -------------------------------------------------- */
