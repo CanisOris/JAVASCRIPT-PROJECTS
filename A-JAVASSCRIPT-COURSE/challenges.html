@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>JS Challenges</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- serves the CSS stylesheet defining the font rules -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="stylesheet" type="text/css" href="/JAVASCRIPT-PROJECTS/style/main.css">
+    <link rel="stylesheet" type="text/css" href="./style/form.css">
+
+    <script defer src="/JAVASCRIPT-PROJECTS/js1/main.js"></script>
+    <script defer src="./js1/main.js"></script>
+    <script defer src="/JAVASCRIPT-PROJECTS/js1/site.js"></script>
+
+    <script crossorigin src="https://unpkg.com/react@18.3.1/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+
+    <style>
+        p {
+            font-size: 1.2vw;
+        }
+
+        .fade-in-text {
+            animation: fade-in 3s ease-in both;
+        }
+
+        @keyframes fade-in {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+
+        .product1 {
+            position: relative;
+            color: red;
+            animation: AlertAni .5s forwards;
+        }
+
+        @keyframes AlertAni {
+            0% {
+                top: 0px;
+                background: red;
+                width: 100%;
+            }
+
+            100% {
+                top: -38px;
+                background: yellow;
+                width: 100%;
+            }
+        }
+
+
+        #msgErr {
+            display: none;
+        }
+    </style>
+
+
+</head>
+
+<body id="body_style">
+    <header>
+        <h1 id="page-title"></h1>
+    </header>
+
+    <div class="button-grid" style="width: 100vw;">
+
+        <div class="flex-box fade-in-text">
+            <h4 class="box-title">Challenges List (1, 2)</h4>
+            <ol>
+                <li>Vw Unit Challenge</li>
+                <li>Fade Challenge</li>
+                <li>Form Challenge</li>
+                <li>Pop Contact Form Challenge</li>
+                <li>Animation Challenge</li>
+                <li>Zoom in and Out Challenge</li>
+                <li>Bookmark Challenge</li>
+                <li>Slideshow Challenge</li>
+                <li>Sticky Challenge</li>
+
+            </ol>
+            <div id="stdout"></div>
+        </div>
+
+
+
+
+        <div class="flex-box">
+            <h4 class="box-title">Form (3)</h4>
+            <form onsubmit="checkPhone(event)">
+
+                <div class="Form_Field">
+                    <label for="phone">Text Notification Phone</label>
+                    <input type="tel" id="phone" name="phone" autocomplete="none" placeholder="503-206-6915"
+                        pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" class="form-input-text" />
+                    <div id="msgErr" style="color: yellow;">Can't text you without your phone number.</div>
+                    <button class="Send_Button" type="submit">Notify Me of Change!<span
+                            aria-hidden="true"></span></button>
+                </div>
+            </form>
+        </div>
+
+
+        <div class="flex-box">
+            <h4 class="box-title">Pop Contact</h4>
+            <div>
+                <!-- **snip(2) Neat trick, pulls the leading lines out of the pre -->
+                <pre class="fade-in-text" style="white-space: pre-line;">
+
+                </pre>
+
+
+            </div>
+        </div>
+
+        <div class="flex-box">
+            <h4 class="box-title">Keyframe </h4>
+            <div class="product1">Not Available</div>
+            Animation (5)
+        </div>
+
+
+    </div>
+
+    <footer></footer>
+
+
+
+
+
+
+</body>
+
+</html>
