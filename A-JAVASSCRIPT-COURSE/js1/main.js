@@ -24,6 +24,13 @@ function closeForm() {
   document.getElementById("form-popup").style.display = "none";
 }
 
+function openForm2() {
+  document.getElementById("form-popup2").style.display = "block";
+}
+
+function closeForm2() {
+  document.getElementById("form-popup2").style.display = "none";
+}
 
 
 // form.addEventListener('submit', function(event) {
