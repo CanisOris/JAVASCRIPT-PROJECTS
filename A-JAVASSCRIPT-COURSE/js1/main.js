@@ -31,7 +31,8 @@ function openForm2() {
   const cornerButton = document.getElementById("corner-contact-button");
   // hide corner button
   cornerButton.hidden = true;
-// set focus to found
+  // **snip(2) this could be very useful on fast form fillout.
+// set focus to found - doesn't up there but if you hit enter 
   document.querySelector("#form-popup2 .close-button").focus();
 }
 
