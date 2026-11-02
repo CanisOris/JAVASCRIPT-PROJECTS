@@ -90,9 +90,7 @@
             <button class="open-button" onclick="openForm()">Join</button>
 
             <div id="form-popup" class="form-popup">
-                <div style="float: right;">
-                    <button class="close-button" onclick="closeForm()">X</button>
-                </div>
+                <button class="close-button" type="button" aria-label="Close contact form" onclick="closeForm()">&times;</button>
                 <form class="Contact_Form" action="" method="POST">
                     <p class="Form_Intro"></p>
                     <div class="Form_Field">
@@ -158,11 +156,9 @@
 
             <!-- =========================================================== -->
              <!-- popup -->
-            <div id="form-popup2" class="form-popup">
+            <div id="form-popup2" class="form-popup" role="region" aria-label="Contact form">
                 
-                <div style="float: right;">
-                  <button class="close-button" onclick="closeForm2()">X</button>
-                </div>
+                <button class="close-button" type="button" aria-label="Close contact form" onclick="closeForm2()">&times;</button>
                 <form class="Contact_Form" action="" method="POST">
                     <p class="Form_Intro"></p>
                     <div class="Form_Field">
@@ -191,6 +187,9 @@
         </div>
 
     </div>
+
+    <button id="corner-contact-button" class="corner-contact-button" type="button"
+        aria-controls="form-popup2" aria-expanded="false" onclick="openForm2()">Join</button>
 
     <footer></footer>
 

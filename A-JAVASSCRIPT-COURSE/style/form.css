@@ -220,6 +220,7 @@ form {
 /* The popup form - hidden by default */
 .form-popup {
     display: none;
+    padding-top: 42px;
     background-color: #41506b;
     position: fixed;
     bottom: 0;
@@ -229,22 +230,66 @@ form {
     z-index: 9;
 }
 
-.felx-box .open-button {
+.flex-box .open-button {
     /* position: fixed; */
     cursor: pointer;
     background-color: #379bb9;
 }
 
-.felx-box .close-button {
-    /* position: fixed; */
-    cursor: pointer;
+/* Always available in the viewport until the contact form is opened. */
+.corner-contact-button {
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+    z-index: 10;
+    padding: 12px 28px;
+    border: 2px solid #d3c440;
+    border-radius: 8px;
     background-color: #379bb9;
+    color: #101a2d;
+    font: inherit;
+    cursor: pointer;
+}
+
+.corner-contact-button:hover {
+    background-color: #88c0d0;
+}
+
+.corner-contact-button:focus-visible {
+    outline: 2px solid #d3c440;
+    outline-offset: 3px;
+}
+
+/* Corrected X close button */
+.form-popup .close-button {
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    display: grid;
+    place-items: center;
+    box-sizing: border-box;
     width: 32px;
-    border-radius: 16px;
-  
-    border: 3px solid #d3c440;
+    height: 32px;
+    max-width: none;
+    padding: 0;
+    margin: 0;
+    background: transparent;
+    border: none;
+    border-radius: 50%;
+    color: #88c0d0;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    line-height: 1;
+
 }
 
-.felx-box .close-button :hover {
-    color: red;
+.form-popup .close-button:hover {
+    
+    background-color: #25424b;
+}
+
+.form-popup .close-button:focus-visible {
+    outline: 2px solid #d3c440;
+    outline-offset: 2px;
 }

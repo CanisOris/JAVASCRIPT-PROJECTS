@@ -1,15 +1,15 @@
 
 
 function checkPhone(event) {
-    const phone = document.getElementById('phone').value.trim();
-    const error = document.getElementById('msgErr');
+  const phone = document.getElementById('phone').value.trim();
+  const error = document.getElementById('msgErr');
 
-        // change element property to flip visibility
-    error.style.display = phone === '' ? 'flex' : 'none';
+  // change element property to flip visibility
+  error.style.display = phone === '' ? 'flex' : 'none';
 
-    if (phone === '') {
-        event.preventDefault();
-    }
+  if (phone === '') {
+    event.preventDefault();
+  }
 }
 
 
@@ -24,12 +24,24 @@ function closeForm() {
   document.getElementById("form-popup").style.display = "none";
 }
 
+
+
 function openForm2() {
   document.getElementById("form-popup2").style.display = "block";
+  const cornerButton = document.getElementById("corner-contact-button");
+  // hide corner button
+  cornerButton.hidden = true;
+// set focus to found
+  document.querySelector("#form-popup2 .close-button").focus();
 }
 
 function closeForm2() {
   document.getElementById("form-popup2").style.display = "none";
+  const cornerButton = document.getElementById("corner-contact-button");
+  // show corner button
+  cornerButton.hidden = false;
+
+  cornerButton.focus();
 }
 
 
