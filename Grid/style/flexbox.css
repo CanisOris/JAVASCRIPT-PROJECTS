@@ -1,0 +1,35 @@
+:root {
+  --bg-color: #0a1128; 
+  --panel-bg: #141f3d; 
+  --accent: #ffd700; 
+  --text: #e2e8f0;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text);
+  font-family: system-ui, sans-serif;
+  padding: 1.5rem;
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap; /* Allows cards to wrap to a new line on smaller screens */
+  gap: 1.5rem;
+  justify-content: center; /* Centers the remaining cards if they wrap */
+  align-items: stretch; /* Forces all cards in a row to match the height of the tallest card */
+}
+
+.flex-card {
+  background-color: var(--panel-bg);
+  padding: 2rem;
+  border-radius: 6px;
+  border-top: 3px solid var(--accent);
+  
+  /* flex-grow | flex-shrink | flex-basis */
+  /* Starts at 300px, grows to fill empty space, shrinks if container is tight */
+  flex: 1 1 300px; 
+  box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+}
+
