@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>JS Challenges</title>
+    <title>JS Assignments</title>
     <meta charset="utf-8" />
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
     <meta http-equiv="Pragma" content="no-cache" />
@@ -38,88 +38,32 @@
     <div class="button-grid" style="width: 100vw;">
 
         <div class="flex-box fade-in-text">
-            <h4 class="box-title">Challenges List (1, 2)</h4>
-            <ol>
-                <li>Vw Unit Challenge</li>
-                <li>Fade Challenge</li>
-                <li>Form Challenge</li>
-                <li>Pop Contact Form Challenge</li>
-                <li>Animation Challenge</li>
-                <li>Zoom in and Out Challenge</li>
-                <li>Bookmark Challenge</li>
-                <li>Slideshow Challenge</li>
-                <li>Sticky Challenge</li>
-
-            </ol>
-            <div id="stdout"></div>
-        </div>
-
-
-
-
-        <div class="flex-box">
-            <h4 class="box-title">Form (3)</h4>
-            <form onsubmit="checkPhone(event)">
-
-                <div class="Form_Field">
-                    <label for="phone">Text Notification Phone</label>
-                    <input type="tel" id="phone" name="phone" autocomplete="none" placeholder="503-206-6915"
-                        pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" class="form-input-text" />
-                    <div id="msgErr" style="color: yellow;">Can't text you without your phone number.</div>
-                    <button class="Send_Button" type="submit">Notify Me of Change!<span
-                            aria-hidden="true"></span></button>
-                </div>
-            </form>
-        </div>
-
-
-        <div class="flex-box">
-            <h4 class="box-title">Pop Contact</h4>
-            <div>
-                <!-- **snip(2) Neat trick, pulls the leading lines out of the pre -->
-                <pre class="fade-in-text" style="white-space: pre-line;">
-
-                </pre>
-
-
-            </div>
-        </div>
-
-        <div class="flex-box">
-            <h4 class="box-title">Pop Contact Form (4)</h4>
-            <button class="open-button" onclick="openForm()">Join</button>
-
-            <div id="form-popup" class="form-popup">
-                <button class="close-button" type="button" aria-label="Close contact form" onclick="closeForm()">&times;</button>
-                <form class="Contact_Form" action="" method="POST">
-                    <p class="Form_Intro"></p>
-                    <div class="Form_Field">
-                        <label for="Name">Your name</label>
-                        <input type="text" id="Name" name="Name" autocomplete="name" placeholder="Full name"
-                            class="form-input-text" required>
-                    </div>
-                    <div class="Form_Field">
-                        <label for="Email">Email address</label>
-                        <input type="email" id="Email" name="Email" autocomplete="email" placeholder="you@example.com"
-                            class="form-input-text" required>
-                    </div>
-                    <div class="Form_Field">
-                        <label for="Message">Your message</label>
-                        <textarea id="Message" name="Message" rows="5"
-                            placeholder="Tell me a little about your project..." class="form-textarea"
-                            required></textarea>
-                    </div>
-                    <button class="Send_Button" type="submit">Send Contact</button>
-                </form>
+            <h4 class="box-title">Hr Tag Assignment</h4>
+            <Hr> Tag Assignment
+            <div id="stdout">
+                A group of blind men heard that a strange animal, called an elephant, had been brought to the town, but
+                none of them were aware of its shape and form. Out of curiosity, they said: "We must inspect and know it
+                by touch, of which we are capable". So, they sought it out, and when they found it they groped about it.
+                <hr>
+                The first person, whose hand landed on the trunk, said, "This being is like a thick snake". For another
+                one whose hand reached its ear, it seemed like a kind of fan. As for another person, whose hand was upon
+                its leg, said, the elephant is a pillar like a tree-trunk. The blind man who placed his hand upon its
+                side said the elephant, "is a wall". Another who felt its tail, described it as a rope. The last felt
+                its tusk, stating the elephant is that which is hard, smooth and like a spear.
             </div>
         </div>
 
 
-        <div class="flex-box">
-            <h4 class="box-title">Keyframe </h4>
-            <div class="product1">Not Available</div>
-            Animation (5)
-        </div>
+
+
+        
+
+       
+        
+       
+
+
+      
 
 
         <div class="flex-box">
@@ -128,68 +72,19 @@
 
         </div>
 
-        <div class="flex-box bookmark-panel">
-            <h4 class="box-title">Bookmark (7)</h4>
-            <a href="#t1">t1</a>
-            <a href="#t2">t2</a>
-            <div id="textBody"></div>
-
-        </div>
-
-
-        <div class="flex-box bookmark-panel">
-            <h4 class="box-title">Slideshow (8)</h4>
-
-            <div class="slideshow-container">
-                <img class="slide active" src="./images/dash1.jpg" alt="Slide 1">
-                <img class="slide" src="./images/dash2.jpg" alt="Slide 2">
-                <img class="slide" src="./images/dish3.jpg" alt="Slide 3">
-            </div>
-        </div>
+        
 
         <div class="flex-box bookmark-panel">
             <h4 class="box-title">Sticky Challenge (9)</h4>
 
-           <div class="flex-box">
-            <h4 class="box-title">Pop Contact Form (4)</h4>
-            <button class="open-button" onclick="openForm2()">Join</button>
+         
 
-            <!-- =========================================================== -->
-             <!-- popup -->
-            <div id="form-popup2" class="form-popup" role="region" aria-label="Contact form">
-                
-                <button class="close-button" type="button" aria-label="Close contact form" onclick="closeForm2()">&times;</button>
-                <form class="Contact_Form" action="" method="POST">
-                    <p class="Form_Intro"></p>
-                    <div class="Form_Field">
-                        <label for="Name">Your name</label>
-                        <input type="text" id="Name" name="Name" autocomplete="name" placeholder="Full name"
-                            class="form-input-text" required>
-                    </div>
-                    <div class="Form_Field">
-                        <label for="Email">Email address</label>
-                        <input type="email" id="Email" name="Email" autocomplete="email" placeholder="you@example.com"
-                            class="form-input-text" required>
-                    </div>
-                    <div class="Form_Field">
-                        <label for="Message">Your message</label>
-                        <textarea id="Message" name="Message" rows="5"
-                            placeholder="Tell me a little about your project..." class="form-textarea"
-                            required></textarea>
-                    </div>
-                    <button class="Send_Button" type="submit">Send Contact</button>
-                </form>
-            </div>
-            <!-- =========================================================== -->
         </div>
-                
-            </div>
-        </div>
+    </div>
 
     </div>
 
-    <button id="corner-contact-button" class="corner-contact-button" type="button"
-        aria-controls="form-popup2" aria-expanded="false" onclick="openForm2()">Join</button>
+
 
     <footer></footer>
 
