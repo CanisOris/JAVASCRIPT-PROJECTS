@@ -21,7 +21,8 @@
 
     <script defer src="./js1/main.js"></script>
     <script defer src="./js1/fillerText.js"></script>
-    <script defer src="./js1/effects.js"></script>
+    <script defer src="./js1/effects2.js"></script>
+    <script defer src="./js1/data.js"></script>
 
     <script crossorigin src="https://unpkg.com/react@18.3.1/umd/react.development.js"></script>
     <script crossorigin src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js"></script>
@@ -53,33 +54,26 @@
             </div>
         </div>
 
+        <div class="flex-box">
+            <h4 class="box-title">Json.stringify()</h4>
+            <div id="strout"></div>
 
-
-
-        
-
-       
-        
-       
-
-
-      
+        </div>
 
 
         <div class="flex-box">
-            <h4 class="box-title">Zoom (6)</h4>
-            <div class="zoom-img"><img src="./images/europa.png" alt="europa img"></div>
-
+            <h4 class="box-title">Json.parse() Object.name</h4>
+            <div id="objout"></div>
         </div>
 
-        
-
-        <div class="flex-box bookmark-panel">
-            <h4 class="box-title">Sticky Challenge (9)</h4>
-
-         
-
+<div class="flex-box">
+            <h4 class="box-title">Localstorage()</h4>
+            <input class="form-input-text" type="text" id="userInput" placeholder="Enter information...">
+            <button id="saveBtn">Save Data</button>
+            <p id="displayArea"></p>
+            <p>Save to local user data</p>
         </div>
+
     </div>
 
     </div>
@@ -93,20 +87,7 @@
 
 
     <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            fillerText('textBody');
-        });
 
-        let currentSlide = 0;
-        const slides = document.querySelectorAll('.slide');
-
-        function nextSlide() {
-            slides[currentSlide].classList.remove('active');
-            currentSlide = (currentSlide + 1) % slides.length;
-            slides[currentSlide].classList.add('active');
-        }
-
-        setInterval(nextSlide, 3000);
 
     </script>
 </body>

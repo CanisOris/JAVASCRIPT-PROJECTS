@@ -22,6 +22,7 @@ body {
   min-height: 90vh;
   
   /* Maps the exact layout structure visually in the code */
+  
   grid-template-areas:
     "header header header"
     "sidebar content widgets"
@@ -42,3 +43,7 @@ body {
 .content { grid-area: content; }
 .widgets { grid-area: widgets; }
 .footer { grid-area: footer; }
+
+
+
+

@@ -15,3 +15,5 @@ let currentSlide = 0;
   }
 
   setInterval(nextSlide, 4500);
+
+
