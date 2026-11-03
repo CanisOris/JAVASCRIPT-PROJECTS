@@ -24,3 +24,8 @@ window.onload = function () {
 
     document.getElementById('objout').innerText = userObject.name;
 }
+
+
+function DDclick() {
+    document.getElementById("t600").style.color = "red";
+}
